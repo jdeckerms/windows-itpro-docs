@@ -7,7 +7,7 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jdeckerms
-localizationpriority: high
+ms.localizationpriority: high
 ---
 
 # Manage Windows 10 Start and taskbar layout
@@ -53,6 +53,8 @@ The following table lists the different parts of Start and any applicable policy
 | All Settings | Group Policy: **Prevent changes to Taskbar and Start Menu Settings** | none |
 | Taskbar | MDM: **Start/NoPinningToTaskbar** | none |
 
+
+[Learn how to customize and export Start layout](customize-and-export-start-layout.md)
 
  ## Taskbar options
 
@@ -111,7 +113,7 @@ The new taskbar layout for upgrades to Windows 10, version 1607 or later, will a
 - [Customize Windows 10 Start and tasbkar with mobile device management (MDM)](customize-windows-10-start-screens-by-using-mobile-device-management.md)
 - [Changes to Start policies in Windows 10](changes-to-start-policies-in-windows-10.md)
 
- 
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=897&newFeedback=true&topic=windows-10-start-layout-options-and-policies.md). 
 
 
 

@@ -11,6 +11,24 @@ author: jdeckerms
 
 This topic lists new and updated topics in the Surface documentation library.
 
+## November 2017
+
+|New or changed topic | Description |
+| --- | --- |
+|[Surface Dock Updater](surface-dock-updater.md) | Added version 2.7.136.0 information  |
+
+## October 2017
+
+New or changed topics | Description 
+--- | ---
+Microsoft Surface Diagnostic Toolkit | Topic removed. The Microsoft Surface Diagnostic Toolkit is no longer available for download.
+
+## September 2017
+
+New or changed topic | Description
+--- | ---
+[Top support solutions for Surface devices](support-solutions-surface.md) | New
+
 ## June 2017
 
 |New or changed topic | Description |

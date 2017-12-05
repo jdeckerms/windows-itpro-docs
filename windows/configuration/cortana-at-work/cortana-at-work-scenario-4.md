@@ -5,7 +5,8 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: eross-msft
-localizationpriority: high
+ms.localizationpriority: high
+ms.author: lizross
 ---
 
 # Test scenario 4 - Use Cortana at work to find your upcoming meetings

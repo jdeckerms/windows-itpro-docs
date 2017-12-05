@@ -1,11 +1,12 @@
 ---
 title: Optional - Create a code signing certificate for code integrity policies (Windows 10)
-description: This article describes how to create a code signing certificate for code integrity policies, one of the main features that are part of Device Guard in Windows 10. 
+description: This article describes how to create a code signing certificate for code integrity policies, one of the main features that are part of Windows Defender Device Guard in Windows 10. 
 keywords: virtualization, security, malware
 ms.prod: w10
 ms.mktglfcycl: deploy
-localizationpriority: high
+ms.localizationpriority: high
 author: brianlic-msft
+ms.date: 10/20/2017
 ---
 
 # Optional: Create a code signing certificate for code integrity policies
@@ -14,9 +15,11 @@ author: brianlic-msft
 -   Windows 10
 -   Windows Server 2016
 
-As you deploy code integrity policies (part of Device Guard), you might need to sign catalog files or code integrity policies internally. To do this, you will either need a publicly issued code signing certificate or an internal CA. If you have purchased a code signing certificate, you can skip this topic and instead follow other topics listed in [Deploy Device Guard: deploy code integrity policies](deploy-device-guard-deploy-code-integrity-policies.md). 
+As you deploy code integrity policies (part of Windows Defender Device Guard), you might need to sign catalog files or code integrity policies internally. To do this, you will either need a publicly issued code signing certificate or an internal CA. If you have purchased a code signing certificate, you can skip this topic and instead follow other topics listed in [Deploy Windows Defender Device Guard: deploy code integrity policies](deploy-device-guard-deploy-code-integrity-policies.md). 
 
-If you have not purchased a certificate but have an internal CA, complete these steps to create a code signing certificate:
+If you have an internal CA, complete these steps to create a code signing certificate. 
+Only RSA algorithm is supported for the code signing certificate, and signatures must be PKCS 1.5 padded. 
+ECDSA is not supported.
 
 1.  Open the Certification Authority Microsoft Management Console (MMC) snap-in, and then select your issuing CA.
 
@@ -96,7 +99,7 @@ When the certificate has been exported, import it into the personal store for th
 
 ## Related topics
 
-- [Introduction to Device Guard: virtualization-based security and code integrity policies](introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies.md)
+- [Introduction to Windows Defender Device Guard: virtualization-based security and code integrity policies](introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies.md)
 
-- [Deploy Device Guard: deploy code integrity policies](deploy-device-guard-deploy-code-integrity-policies.md)
+- [Deploy Windows Defender Device Guard: deploy code integrity policies](deploy-device-guard-deploy-code-integrity-policies.md)
 

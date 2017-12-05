@@ -1,5 +1,5 @@
 ---
-localizationpriority: low
+ms.localizationpriority: low
 ms.mktglfcycl: deploy
 ms.pagetype: appcompat
 description: Use the Enterprise Mode Site List Manager to create and update your Enterprise Mode site list for devices running Windows 10.
@@ -31,7 +31,7 @@ Because of the schema changes, you can't combine the old version (v.1) with the 
 
 -   &lt;site-list&gt;. If your schema root node includes this key, you're using the v.2 version of the schema.
 
-You can continue to use the v.1 version of the schema on Windows 10, but you won't have the benefits of the new v.2 version schema updates and new features. Additionally, if you save the v.1 version of the schema in the new Enterprise Mode Site List Manager for Windows 10, it will automatically update the file to use the v.2 version of the schema.
+You can continue to use the v.1 version of the schema on Windows 10, but you won't have the benefits of the new v.2 version schema updates and new features. Additionally, saving the v.1 version of the schema in the new Enterprise Mode Site List Manager (schema v.2) automatically updates the file to use the v.2 version of the schema.
 
 ### Enterprise Mode v.2 schema example
 The following is an example of the v.2 version of the Enterprise Mode schema.

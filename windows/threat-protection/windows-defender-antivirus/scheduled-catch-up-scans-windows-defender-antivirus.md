@@ -1,19 +1,21 @@
 ---
-title: Schedule regular scans with Windows Defender AV
+title: Schedule regular quick and full scans with Windows Defender AV
 description: Set up recurring (scheduled) scans, including when they should run and whether they run as full or quick scans
-keywords: schedule scan, daily, weekly, time, scheduled, recurring, regular
+keywords: quick scan, full scan, quick vs full, schedule scan, daily, weekly, time, scheduled, recurring, regular
 search.product: eADQiWindows 10XVcnh
 ms.pagetype: security
 ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: security
-localizationpriority: medium
+ms.localizationpriority: medium
 author: iaanw
+ms.author: iawilt
+ms.date: 08/25/2017
 ---
 
 
-# Configure scheduled scans for Windows Defender AV
+# Configure scheduled quick or full scans for Windows Defender AV
 
 
 

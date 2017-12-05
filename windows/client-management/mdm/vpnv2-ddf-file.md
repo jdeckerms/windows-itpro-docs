@@ -7,13 +7,11 @@ ms.topic: article
 ms.prod: w10
 ms.technology: windows
 author: nickbrower
-ms.date: 07/07/2017
+ms.date: 11/01/2017
 ---
 
 # VPNv2 DDF file
 
-> [!WARNING]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 This topic shows the OMA DM device description framework (DDF) for the **VPNv2** configuration service provider.
 
@@ -977,6 +975,33 @@ The XML below is for Windows 10, version 1709.
 
                         A device tunnel profile must be deleted before another device tunnel
                         profile can be added, removed, or connected.
+                    </Description>
+                    <DFFormat>
+                        <bool />
+                    </DFFormat>
+                    <Occurrence>
+                        <ZeroOrOne />
+                    </Occurrence>
+                    <Scope>
+                        <Dynamic />
+                    </Scope>
+                    <DFType>
+                        <MIME>text/plain</MIME>
+                    </DFType>
+                </DFProperties>
+            </Node>
+            <Node>
+                <NodeName>RegisterDNS</NodeName>
+                <DFProperties>
+                    <AccessType>
+                        <Add />
+                        <Delete />
+                        <Get />
+                        <Replace />
+                    </AccessType>
+                    <Description>
+                        False = Do not register the connection's address in DNS (default).
+                        True = Register the connection's addresses in DNS.
                     </Description>
                     <DFFormat>
                         <bool />

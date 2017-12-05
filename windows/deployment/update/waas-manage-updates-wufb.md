@@ -5,7 +5,7 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: DaniHalfin
-localizationpriority: high
+ms.localizationpriority: high
 ms.author: daniha
 ---
 
@@ -18,6 +18,11 @@ ms.author: daniha
 - Windows 10 Mobile
 
 > **Looking for consumer information?** See [Windows Update: FAQ](https://support.microsoft.com/help/12373/windows-update-faq) 
+
+>[!IMPORTANT]
+>Due to [naming changes](waas-overview.md#naming-changes), older terms like CB,CBB and LTSB may still be displayed in some of our products.
+>
+>In the following settings CB refers to Semi-Annual Channel (Targeted), while CBB refers to Semi-Annual Channel. 
 
 Windows Update for Business enables information technology administrators to keep the Windows 10 devices in their organization always up to date with the latest security defenses and Windows features by directly connecting these systems to Windows Update service.  You can use Group Policy or MDM solutions such as Intune to configure the Windows Update for Business settings that control how and when Windows 10 devices are updated. In addition, by using Intune, organizations can manage devices that are not joined to a domain at all or are joined to Microsoft Azure Active Directory (Azure AD) alongside your on-premises domain-joined machines.  
 
@@ -52,6 +57,29 @@ Both Feature and Quality Updates can be deferred from deploying to client device
 >[!NOTE]
 >For information about classification GUIDs, see [WSUS Classification GUIDs](https://msdn.microsoft.com/en-us/library/ff357803.aspx).
 
+## Changes to Windows Update for Business in Windows 10, version 1709
+
+The group policy path for Windows Update for Business was changed to correctly reflect its association to Windows Update for Business.
+
+| Prior to Windows 10, version 1709 | Windows 10, version 1709 |
+| --- | --- |
+| Computer Configuration > Administrative Templates > Windows Components > Windows Update > Defer Windows Update | Computer Configuration > Administrative Templates > Windows Components > Windows Update > Windows Update for Business | 
+
+We have added the ability to manage Windows Insider preview builds and their delivery:
+
+The **Manage preview builds** setting gives administrators control over enabling or disabling preview build installation on a device. You can also decide to stop preview builds once the release is public.
+* Group Policy: **Computer Configuration/Administrative Templates/Windows Components/Windows Update/Windows Update for Business** - *Manage preview builds*
+* MDM: **Update/ManagePreviewBuilds**
+
+>[!IMPORTANT]
+>This policy replaces the "Toggle user control over Insider builds" policy under that is only supported up to Windows 10, version 1703. You can find the older policy here:
+>* Group Policy: **Computer Configuration/Administrative Templates/Windows Components/Data Collection and Preview Builds/Toggle user control over Insider builds**
+>* MDM: **System/AllowBuildPreview**
+
+The policy settings to **Select when Feature Updates are received** is now called **Select when Preview Builds and Feature Updates are received**. In addition to previous functionality, it now allows you to choose between preview flight rings, and allows you to defer or pause their delivery.
+* Group Policy: **Computer Configuration/Administrative Templates/Windows Components/Windows Update/ Windows Update for Business** - *Select when Preview Builds and Feature Updates are received*
+* MDM: **Update/BranchReadinessLevel**
+
 ## Changes to Windows Update for Business in Windows 10, version 1703
 
 ### Options added to Settings
@@ -75,7 +103,7 @@ The pause period is now calculated starting from the set start date. For additio
 Windows Update for Business was first made available in Windows 10, version 1511. In Windows 10, version 1607 (also known as the Anniversary Update), there are several new or changed capabilities provided as well as updated behavior.   
 
 >[!NOTE]
->For more information on Current Branch and Current Branch for Business, see [Windows 10 servicing options](waas-overview.md#servicing-branches).
+>For more information on Current Branch and Current Branch for Business, see [Windows 10 servicing options](waas-overview.md#servicing-channels).
 
 <table>
     <thead>
@@ -98,14 +126,18 @@ Update Compliance, now **available in public preview**, provides a holistic view
 
 For more information about Update Compliance, see [Monitor Windows Updates using Update Compliance](update-compliance-monitor.md).
 
+## Manage Windows Update for Business with Intune
+
+Microsoft Intune provides the ability to configure Windows Update for Business settings on devices. Intune doesn’t store the updates, but only the update policy assignment. For more information, see [Manage software updates](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+
 ## Steps to manage updates for Windows 10
 
 | | |
 | --- | --- |
-| ![done](images/checklistdone.png) | [Learn about updates and servicing branches](waas-overview.md) |
+| ![done](images/checklistdone.png) | [Learn about updates and servicing channels](waas-overview.md) |
 | ![done](images/checklistdone.png) | [Prepare servicing strategy for Windows 10 updates](waas-servicing-strategy-windows-10-updates.md) |
 | ![done](images/checklistdone.png) | [Build deployment rings for Windows 10 updates](waas-deployment-rings-windows-10-updates.md) |
-| ![done](images/checklistdone.png) | [Assign devices to servicing branches for Windows 10 updates](waas-servicing-branches-windows-10-updates.md) |
+| ![done](images/checklistdone.png) | [Assign devices to servicing channels for Windows 10 updates](waas-servicing-channels-windows-10-updates.md) |
 | ![done](images/checklistdone.png) | [Optimize update delivery for Windows 10 updates](waas-optimize-windows-10-updates.md) |
 | ![done](images/checklistdone.png) | Deploy updates using Windows Update for Business (this topic) </br>or [Deploy Windows 10 updates using Windows Server Update Services](waas-manage-updates-wsus.md)</br>or [Deploy Windows 10 updates using System Center Configuration Manager](waas-manage-updates-configuration-manager.md) |
 
@@ -114,7 +146,7 @@ For more information about Update Compliance, see [Monitor Windows Updates using
 - [Overview of Windows as a service](waas-overview.md)
 - [Prepare servicing strategy for Windows 10 updates](waas-servicing-strategy-windows-10-updates.md)
 - [Build deployment rings for Windows 10 updates](waas-deployment-rings-windows-10-updates.md)
-- [Assign devices to servicing branches for Windows 10 updates](waas-servicing-branches-windows-10-updates.md)
+- [Assign devices to servicing channels for Windows 10 updates](waas-servicing-channels-windows-10-updates.md)
 - [Optimize update delivery for Windows 10 updates](waas-optimize-windows-10-updates.md)
 - [Configure Delivery Optimization for Windows 10 updates](waas-delivery-optimization.md)
 - [Configure BranchCache for Windows 10 updates](waas-branchcache.md)

@@ -5,7 +5,8 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: eross-msft
-localizationpriority: high
+ms.localizationpriority: high
+ms.author: lizross
 ---
 
 # Test scenario 6 - Review a reminder suggested by Cortana based on what you’ve promised in email

@@ -10,13 +10,11 @@ ms.topic: article
 ms.prod: w10
 ms.technology: windows
 author: nickbrower
-ms.date: 07/07/2017
+ms.date: 11/01/2017
 ---
 
 # What's new in MDM enrollment and management
 
-> [!WARNING]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 This topic provides information about what's new and breaking changes in Windows 10 mobile device management (MDM) enrollment and management experience across all Windows 10 devices.
 
@@ -51,7 +49,7 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 
 ## <a href="" id="whatsnew"></a>What's new in Windows 10, version 1511
 
-<table>
+<table class="mx-tdBreakAll">
 <colgroup>
 <col width="25%" />
 <col width="75%" />
@@ -101,7 +99,7 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 </ul></td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top"><p>Management tool for the Windows Store for Business</p></td>
+<td style="vertical-align:top"><p>Management tool for the Micosoft Store for Business</p></td>
 <td style="vertical-align:top"><p>New topics. The Store for Business has a new web service designed for the enterprise to acquire, manage, and distribute applications in bulk. It enables several capabilities that are required for the enterprise to manage the lifecycle of applications from acquisition to updates.</p></td>
 </tr>
 <tr class="even">
@@ -183,7 +181,7 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 
 ## <a href="" id="whatsnew1607"></a>What's new in Windows 10, version 1607
 
-<table>
+<table class="mx-tdBreakAll">
 <colgroup>
 <col width="25%" />
 <col width="75%" />
@@ -494,7 +492,7 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 
 ## <a href="" id="whatsnew10"></a>What's new in Windows 10, version 1703
 
-<table>
+<table class="mx-tdBreakAll">
 <colgroup>
 <col width="25%" />
 <col width="75%" />
@@ -677,12 +675,11 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 <li>Update/ActiveHoursMaxRange</li>
 <li>Update/AutoRestartDeadlinePeriodInDays</li>
 <li>Update/AutoRestartNotificationSchedule</li>
-<li>Update/AutoRestartNotificationStyle</li>
 <li>Update/AutoRestartRequiredNotificationDismissal</li>
 <li>Update/DetectionFrequency</li>
 <li>Update/EngagedRestartDeadline</li>
 <li>Update/EngagedRestartSnoozeSchedule</li>
-<li>Update/EngagedRestartTransistionSchedule</li>
+<li>Update/EngagedRestartTransitionSchedule</li>
 <li>Update/IgnoreMOAppDownloadLimit</li>
 <li>Update/IgnoreMOUpdateDownloadLimit</li>
 <li>Update/PauseFeatureUpdatesStartTime</li>
@@ -858,7 +855,7 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 </ul>
 </td></tr>
 <tr class="even">
-<td style="vertical-align:top">[MDM Bridge WMI Provider](https://msdnstage.redmond.corp.microsoft.com/en-us/library/windows/desktop/dn905224(v=vs.85).aspx)</td>
+<td style="vertical-align:top">[MDM Bridge WMI Provider](https://msdn.microsoft.com/library/windows/hardware/dn905224)</td>
 <td style="vertical-align:top"><p>Added new classes and properties.</p>
 </td></tr>
 <td style="vertical-align:top">[Understanding ADMX-backed policies](understanding-admx-backed-policies.md)</td>
@@ -916,7 +913,7 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 
 ## <a href="" id="whatsnew1709"></a>What's new in Windows 10, version 1709
 
-<table>
+<table class="mx-tdBreakAll">
 <colgroup>
 <col width="25%" />
 <col width="75%" />
@@ -929,7 +926,21 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 </thead>
 <tbody>
 <tr class="even">
+<td style="vertical-align:top">The [\[MS-MDE2\]: Mobile Device Enrollment Protocol Version 2](https://msdn.microsoft.com/en-us/library/mt221945.aspx)</td>
+<td style="vertical-align:top"><p>The Windows 10 enrollment protocol was updated. The following elements were added to the RequestSecurityToken message:</p>
+<ul>
+<li>UXInitiated - boolean value that indicates whether the enrollment is user initiated from the Settings page. </li>
+<li>ExternalMgmtAgentHint - a string the agent uses to give hints the enrollment server may need.</li>
+<li>DomainName - fully qualified domain name if the device is domain-joined.</li>
+</ul>
+<p>For examples, see section 4.3.1 RequestSecurityToken of the the MS-MDE2 protocol documentation.</p>
+</td></tr>
+<tr class="even">
 <td style="vertical-align:top">[Firewall CSP](firewall-csp.md)</td>
+<td style="vertical-align:top"><p>Added new CSP in Windows 10, version 1709.</p>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">[eUICCs CSP](euiccs-csp.md)</td>
 <td style="vertical-align:top"><p>Added new CSP in Windows 10, version 1709.</p>
 </td></tr>
 <tr class="odd">
@@ -946,35 +957,161 @@ For details about Microsoft mobile device management protocols for Windows 10 s
 </tr>
 <tr class="even">
 <td style="vertical-align:top">[VPNv2 CSP](vpnv2-csp.md)</td>
-<td style="vertical-align:top"><p>Added DeviceTunnel profile in Windows 10, version 1709.</p>
+<td style="vertical-align:top"><p>Added DeviceTunnel and RegisterDNS settings in Windows 10, version 1709.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[DeviceStatus CSP](devicestatus-csp.md)</td>
+<td style="vertical-align:top"><p>Added the following settings in Windows 10, version 1709:</p>
+<ul>
+<li>DeviceStatus/DomainName</li>
+<li>DeviceStatus/DeviceGuard/VirtualizationBasedSecurityHwReq</li>
+<li>DeviceStatus/DeviceGuard/VirtualizationBasedSecurityStatus</li>
+<li>DeviceStatus/DeviceGuard/LsaCfgCredGuardStatus</li>
+</ul>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">[AssignedAccess CSP](assignedaccess-csp.md)</td>
+<td style="vertical-align:top"><p>Added the following setting in Windows 10, version 1709.</p>
+<ul>
+<li>Configuration</li>
+</ul>
+<p>Starting in Windows 10, version 1709, AssignedAccess CSP is supported in Windows 10 Pro.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[DeviceManageability CSP](devicemanageability-csp.md)</td>
+<td style="vertical-align:top"><p>Added the following settings in Windows 10, version 1709:</p>
+<ul>
+<li>Provider/_ProviderID_/ConfigInfo</li>
+<li> Provider/_ProviderID_/EnrollmentInfo</li>
+</ul>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Office CSP](office-csp.md)</td>
+<td style="vertical-align:top"><p>Added the following setting in Windows 10, version 1709:</p>
+<ul>
+<li>Installation/CurrentStatus</li>
+</ul>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[DMClient CSP](dmclient-csp.md)</td>
+<td style="vertical-align:top"><p>Added new nodes to the DMClient CSP in Windows 10, version 1709. Updated the CSP and DDF topics.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Bitlocker CSP](bitlocker-csp.md)</td>
+<td style="vertical-align:top"><p>Changed the minimum personal identification number (PIN) length to 4 digits in SystemDrivesRequireStartupAuthentication and SystemDrivesMinimumPINLength in Windows 10, version 1709.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[ADMX-backed policies in Policy CSP](policy-configuration-service-provider.md#admx-backed-policies)</td>
+<td style="vertical-align:top"><p>Added new policies.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">Microsoft Store for Business and Microsoft Store</td>
+<td style="vertical-align:top"><p>Windows Store for Business name changed to Microsoft Store for Business. Windows Store name changed to Microsoft Store.</p>
+</td></tr>
+<td style="vertical-align:top">[MDM enrollment of Windows-based devices](mdm-enrollment-of-windows-devices.md)</td>
+<td style="vertical-align:top"><p>New features in the Settings app:</p>
+<ul>
+<li>User sees installation progress of critical policies during MDM enrollment.</li>
+<li>User knows what policies, profiles, apps MDM has configured</li>
+<li>IT helpdesk can get detailed MDM diagnostic information using client tools</li>
+</ul>
+<p>For details, see [Managing connection](mdm-enrollment-of-windows-devices.md#managing-connections) and [Collecting diagnostic logs](mdm-enrollment-of-windows-devices.md#collecting-diagnostic-logs)</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Enroll a Windows 10 device automatically using Group Policy](enroll-a-windows-10-device-automatically-using-group-policy.md)</td>
+<td style="vertical-align:top"><p>Added new topic to introduce a new Group Policy for automatic MDM enrollment.</p>
 </td></tr>
 <tr class="odd">
 <td style="vertical-align:top">[Policy CSP](policy-configuration-service-provider.md)</td>
 <td style="vertical-align:top"><p>Added the following new policies for Windows 10, version 1709:</p> 
 <ul>
-<li>CredentialProviders/EnableWindowsAutoPilotResetCredentials</li>
+<li>Authentication/AllowAadPasswordReset</li>
+<li>Authentication/AllowFidoDeviceSignon</li>
+<li>Browser/LockdownFavorites</li>
+<li>Browser/ProvisionFavorites</li>
+<li>Cellular/LetAppsAccessCellularData</li>
+<li>Cellular/LetAppsAccessCellularData_ForceAllowTheseApps</li>
+<li>Cellular/LetAppsAccessCellularData_ForceDenyTheseApps</li>
+<li>Cellular/LetAppsAccessCellularData_UserInControlOfTheseApps</li>
+<li>CredentialProviders/DisableAutomaticReDeploymentCredentials</li>
 <li>DeviceGuard/EnableVirtualizationBasedSecurity</li>
 <li>DeviceGuard/RequirePlatformSecurityFeatures</li>
 <li>DeviceGuard/LsaCfgFlags</li>
+<li>ExploitGuard/ExploitProtectionSettings</li>
+<li>Games/AllowAdvancedGamingServices</li>
+<li>Handwriting/PanelDefaultModeDocked</li>
+<li>LocalPoliciesSecurityOptions/Accounts_BlockMicrosoftAccounts</li>
+<li>LocalPoliciesSecurityOptions/Accounts_EnableAdministratorAccountStatus</li>
+<li>LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus</li>
+<li>LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly</li>
+<li>LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount</li> 
+<li>LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount</li> 
+<li>LocalPoliciesSecurityOptions/InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked</li> 
+<li>LocalPoliciesSecurityOptions/Interactivelogon_DoNotDisplayLastSignedIn</li> 
+<li>LocalPoliciesSecurityOptions/Interactivelogon_DoNotDisplayUsernameAtSignIn</li> 
+<li>LocalPoliciesSecurityOptions/Interactivelogon_DoNotRequireCTRLALTDEL</li> 
+<li>LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit</li> 
+<li>LocalPoliciesSecurityOptions/InteractiveLogon_MessageTextForUsersAttemptingToLogOn</li> 
+<li>LocalPoliciesSecurityOptions/InteractiveLogon_MessageTitleForUsersAttemptingToLogOn</li> 
+<li>LocalPoliciesSecurityOptions/NetworkSecurity_AllowPKU2UAuthenticationRequests</li> 
+<li>LocalPoliciesSecurityOptions/RecoveryConsole_AllowAutomaticAdministrativeLogon</li> 
+<li>LocalPoliciesSecurityOptions/Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_AllowUIAccessApplicationsToPromptForElevation</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministrators</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateExecutableFilesThatAreSignedAndValidated</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations</li> 
 <li>Power/DisplayOffTimeoutOnBattery</li>
 <li>Power/DisplayOffTimeoutPluggedIn</li>
 <li>Power/HibernateTimeoutOnBattery</li>
 <li>Power/HibernateTimeoutPluggedIn</li>
 <li>Power/StandbyTimeoutOnBattery</li>
 <li>Power/StandbyTimeoutPluggedIn</li>
+<li>Privacy/EnableActivityFeed</li>
+<li>Privacy/PublishUserActivities</li>
 <li>Defender/AttackSurfaceReductionOnlyExclusions</li>
 <li>Defender/AttackSurfaceReductionRules</li>
 <li>Defender/CloudBlockLevel </li>
 <li>Defender/CloudExtendedTimeout</li>
-<li>Defender/EnableGuardMyFolders</li>
+<li>Defender/ControlledFolderAccessAllowedApplications</li>
+<li>Defender/ControlledFolderAccessProtectedFolders</li>
+<li>Defender/EnableControlledFolderAccess</li>
 <li>Defender/EnableNetworkProtection</li>
-<li>Defender/GuardedFoldersAllowedApplications</li>
-<li>Defender/GuardedFoldersList</li>
+<li>Education/DefaultPrinterName</li>
+<li>Education/PreventAddingNewPrinters</li>
+<li>Education/PrinterNames</li>
+<li>Search/AllowCloudSearch</li>
+<li>Security/ClearTPMIfNotReady</li>
+<li>Start/HidePeopleBar</li>
+<li>Storage/AllowDiskHealthModelUpdates</li>
+<li>System/LimitEnhancedDiagnosticDataWindowsAnalytics</li>
+<li>Update/AllowAutoWindowsUpdateDownloadOverMeteredNetwork</li>
+<li>Update/DisableDualScan</li>
+<li>Update/ManagePreviewBuilds</li>
 <li>Update/ScheduledInstallEveryWeek</li>
 <li>Update/ScheduledInstallFirstWeek</li>
 <li>Update/ScheduledInstallFourthWeek</li>
 <li>Update/ScheduledInstallSecondWeek</li>
 <li>Update/ScheduledInstallThirdWeek</li>
+<li>WindowsDefenderSecurityCenter/CompanyName</li>
+<li>WindowsDefenderSecurityCenter/DisableAppBrowserUI</li>
+<li>WindowsDefenderSecurityCenter/DisableEnhancedNotifications</li>
+<li>WindowsDefenderSecurityCenter/DisableFamilyUI</li>
+<li>WindowsDefenderSecurityCenter/DisableHealthUI</li>
+<li>WindowsDefenderSecurityCenter/DisableNetworkUI</li>
+<li>WindowsDefenderSecurityCenter/DisableNotifications</li>
+<li>WindowsDefenderSecurityCenter/DisableVirusUI</li>
+<li>WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride</li>
+<li>WindowsDefenderSecurityCenter/Email</li>
+<li>WindowsDefenderSecurityCenter/EnableCustomizedToasts</li>
+<li>WindowsDefenderSecurityCenter/EnableInAppCustomization</li>
+<li>WindowsDefenderSecurityCenter/Phone</li>
+<li>WindowsDefenderSecurityCenter/URL</li>
+<li>WirelessDisplay/AllowMdnsAdvertisement</li>
+<li>WirelessDisplay/AllowMdnsDiscovery</li>
 </ul>
 </td></tr>
 </tbody>
@@ -1040,7 +1177,7 @@ The software version information from **DevDetail/SwV** does not match the versi
 
     To workaround this issue, remove the Windows Phone 8.1 publisher rule and add the specific product ID for each Silverlight app you want to allow to the allowed app list.
 
--   Some apps (specifically those that are published in Windows Store as AppX Bundles) are blocked from installing even when they are included in the app list.
+-   Some apps (specifically those that are published in Microsoft Store as AppX Bundles) are blocked from installing even when they are included in the app list.
 
     No workaround is available at this time. An OS update to fix this issue is coming soon.
 
@@ -1245,6 +1382,289 @@ The DM agent for [push-button reset](https://msdn.microsoft.com/windows/hardware
 
 ## Change history in MDM documentation
 
+### November 2017
+
+<table class="mx-tdBreakAll">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>New or updated topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="vertical-align:top">[Policy CSP](policy-configuration-service-provider.md)</td>
+<td style="vertical-align:top"><p>Added the following policies for Windows 10, version 1709:</p>
+<ul>
+<li>Authentication/AllowFidoDeviceSignon</li>
+<li>Cellular/LetAppsAccessCellularData</li>
+<li>Cellular/LetAppsAccessCellularData_ForceAllowTheseApps</li>
+<li>Cellular/LetAppsAccessCellularData_ForceDenyTheseApps</li>
+<li>Cellular/LetAppsAccessCellularData_UserInControlOfTheseApps</li>
+<li>Start/HidePeopleBar</li>
+<li>Storage/EnhancedStorageDevices</li>
+<li>Update/ManagePreviewBuilds</li>
+<li>WirelessDisplay/AllowMdnsAdvertisement</li>
+<li>WirelessDisplay/AllowMdnsDiscovery</li>
+</ul>
+<p>Added missing policies from previous releases:</p>
+<ul>
+<li>Connectivity/DisallowNetworkConnectivityActiveTest</li>
+<li>Search/AllowWindowsIndexer</li>
+</ul>
+</td></tr>
+</tbody>
+</table>
+
+### October 2017
+
+<table class="mx-tdBreakAll">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>New or updated topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="vertical-align:top">[Policy DDF file](policy-ddf-file.md)</td>
+<td style="vertical-align:top"><p>Updated the DDF content for Windows 10 version 1709. Added a link to the download of Policy DDF for Windows 10, version 1709.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Policy CSP](policy-configuration-service-provider.md)</td>
+<td style="vertical-align:top"><p>Updated the following policies:</p>
+<ul>
+<li>Defender/ControlledFolderAccessAllowedApplications - string separator is |.</li>
+<li>Defender/ControlledFolderAccessProtectedFolders - string separator is |.</li>
+</ul>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">[eUICCs CSP](euiccs-csp.md)</td>
+<td style="vertical-align:top"><p>Added new CSP in Windows 10, version 1709.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[AssignedAccess CSP](assignedaccess-csp.md)</td>
+<td style="vertical-align:top"><p>Added SyncML examples for the new Configuration node.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[DMClient CSP](dmclient-csp.md)</td>
+<td style="vertical-align:top"><p>Added new nodes to the DMClient CSP in Windows 10, version 1709. Updated the CSP and DDF topics.</p>
+</td></tr>
+</tbody>
+</table>
+
+
+### September 2017
+
+<table class="mx-tdBreakAll">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>New or updated topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="vertical-align:top">[Policy CSP](policy-configuration-service-provider.md)</td>
+<td style="vertical-align:top"><p>Added the following new policies for Windows 10, version 1709:</p>
+<ul>
+<li>Authentication/AllowAadPasswordReset</li>
+<li>Handwriting/PanelDefaultModeDocked</li>
+<li>Search/AllowCloudSearch</li>
+<li>System/LimitEnhancedDiagnosticDataWindowsAnalytics</li>
+</ul>
+<p>Added new settings to Update/BranchReadinessLevel policy in Windows 10 version 1709.</p>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">[AssignedAccess CSP](assignedaccess-csp.md)</td>
+<td style="vertical-align:top"><p>Starting in Windows 10, version 1709, AssignedAccess CSP is also supported in Windows 10 Pro.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">Microsoft Store for Business and Microsoft Store</td>
+<td style="vertical-align:top"><p>Windows Store for Business name changed to Microsoft Store for Business. Windows Store name changed to Microsoft Store.</p>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">The [\[MS-MDE2\]: Mobile Device Enrollment Protocol Version 2](https://msdn.microsoft.com/en-us/library/mt221945.aspx)</td>
+<td style="vertical-align:top"><p>The Windows 10 enrollment protocol was updated. The following elements were added to the RequestSecurityToken message:</p>
+<ul>
+<li>UXInitiated - boolean value that indicates whether the enrollment is user initiated from the Settings page. </li>
+<li>ExternalMgmtAgentHint - a string the agent uses to give hints the enrollment server may need.</li>
+<li>DomainName - fully qualified domain name if the device is domain-joined.</li>
+</ul>
+<p>For examples, see section 4.3.1 RequestSecurityToken of the the MS-MDE2 protocol documentation.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[EntepriseAPN CSP](enterpriseapn-csp.md)</td>
+<td style="vertical-align:top"><p>Added a SyncML example.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[VPNv2 CSP](vpnv2-csp.md)</td>
+<td style="vertical-align:top"><p>Added RegisterDNS setting in Windows 10, version 1709.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Enroll a Windows 10 device automatically using Group Policy](enroll-a-windows-10-device-automatically-using-group-policy.md)</td>
+<td style="vertical-align:top"><p>Added new topic to introduce a new Group Policy for automatic MDM enrollment.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[MDM enrollment of Windows-based devices](mdm-enrollment-of-windows-devices.md)</td>
+<td style="vertical-align:top"><p>New features in the Settings app:</p>
+<ul>
+<li>User sees installation progress of critical policies during MDM enrollment.</li>
+<li>User knows what policies, profiles, apps MDM has configured</li>
+<li>IT helpdesk can get detailed MDM diagnostic information using client tools</li>
+</ul>
+<p>For details, see [Managing connections](mdm-enrollment-of-windows-devices.md#managing-connections) and [Collecting diagnostic logs](mdm-enrollment-of-windows-devices.md#collecting-diagnostic-logs)</p>
+</td></tr>
+</tbody>
+</table>
+
+### August 2017
+
+<table class="mx-tdBreakAll">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>New or updated topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="vertical-align:top">[Enable ADMX-backed policies in MDM](enable-admx-backed-policies-in-mdm.md)</td>
+<td style="vertical-align:top"><p>Added new step-by-step guide to enable ADMX-backed policies.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Mobile device enrollment](mobile-device-enrollment.md)</td>
+<td style="vertical-align:top"><p>Added the following statement:</p>
+<ul>
+<li>Devices that are joined to an on-premise Active Directory can enroll into MDM via the Work access page in <strong>Settings</strong>. However, the enrollment can only target the user enrolled with user-specific policies. Device targeted policies will continue to impact all users of the device.</li>
+</ul>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[CM\_CellularEntries CSP](cm-cellularentries-csp.md)</td>
+<td style="vertical-align:top"><p>Updated the description of the PuposeGroups node to add the GUID for applications. This node is required instead of optional.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[EnterpriseDataProtection CSP](enterprisedataprotection-csp.md)</td>
+<td style="vertical-align:top"><p>Updated the Settings/EDPEnforcementLevel values to the following:</p>
+<ul>
+<li> 0 (default) – Off / No protection (decrypts previously protected data).</li>
+<li>  1 – Silent mode (encrypt and audit only).</li>
+<li>  2 – Allow override mode (encrypt, prompt and allow overrides, and audit).</li>
+<li>  3 – Hides overrides (encrypt, prompt but hide overrides, and audit).</li>
+</ul>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[AppLocker CSP](applocker-csp.md)</td>
+<td style="vertical-align:top"><p>Added two new SyncML examples (to disable the calendar app and to block usage of the map app) in [Whitelist examples](applocker-csp.md#whitelist-examples).</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[DeviceManageability CSP](devicemanageability-csp.md)</td>
+<td style="vertical-align:top"><p>Added the following settings in Windows 10, version 1709:</p>
+<ul>
+<li>Provider/_ProviderID_/ConfigInfo</li>
+<li> Provider/_ProviderID_/EnrollmentInfo</li>
+</ul>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Office CSP](office-csp.md)</td>
+<td style="vertical-align:top"><p>Added the following setting in Windows 10, version 1709:</p>
+<ul>
+<li>Installation/CurrentStatus</li>
+</ul>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[BitLocker CSP](bitlocker-csp.md)</td>
+<td style="vertical-align:top">Added information to the ADMX-backed policies. Changed the minimum personal identification number (PIN) length to 4 digits in SystemDrivesRequireStartupAuthentication and SystemDrivesMinimumPINLength in Windows 10, version 1709.
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Firewall CSP](firewall-csp.md)</td>
+<td style="vertical-align:top">Updated the CSP and DDF topics. Here are the changes:
+<ul>
+<li>Removed the two settings - FirewallRules/FirewallRuleName/FriendlyName and FirewallRules/FirewallRuleName/IcmpTypesAndCodes.</li>
+<li>Changed some data types from integer to bool.</li>
+<li>Updated the list of supported operations for some settings.</li>
+<li>Added default values.</li>
+</ul>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[Policy DDF file](policy-ddf-file.md)</td>
+<td style="vertical-align:top">Added another Policy DDF file [download](http://download.microsoft.com/download/6/1/C/61C022FD-6F5D-4F73-9047-17F630899DC4/PolicyDDF_all_version1607_8C.xml) for the 8C release of Windows 10, version 1607, which added the following policies:
+<ul>
+<li>Browser/AllowMicrosoftCompatibilityList</li>
+<li>Update/DisableDualScan</li>
+<li>Update/FillEmptyContentUrls</li>
+</ul>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">[Policy CSP](policy-configuration-service-provider.md)</td>
+<td style="vertical-align:top"><p>Added the following new policies for Windows 10, version 1709:</p>
+<ul>
+<li>Browser/ProvisionFavorites</li>
+<li>Browser/LockdownFavorites</li>
+<li>ExploitGuard/ExploitProtectionSettings</li>
+<li>Games/AllowAdvancedGamingServices</li>
+<li>LocalPoliciesSecurityOptions/Accounts_BlockMicrosoftAccounts</li>
+<li>LocalPoliciesSecurityOptions/Accounts_EnableAdministratorAccountStatus</li>
+<li>LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus</li>
+<li>LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly</li>
+<li>LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount</li> 
+<li>LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount</li> 
+<li>LocalPoliciesSecurityOptions/InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked</li> 
+<li>LocalPoliciesSecurityOptions/Interactivelogon_DoNotDisplayLastSignedIn</li> 
+<li>LocalPoliciesSecurityOptions/Interactivelogon_DoNotDisplayUsernameAtSignIn</li> 
+<li>LocalPoliciesSecurityOptions/Interactivelogon_DoNotRequireCTRLALTDEL</li> 
+<li>LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit</li> 
+<li>LocalPoliciesSecurityOptions/InteractiveLogon_MessageTextForUsersAttemptingToLogOn</li> 
+<li>LocalPoliciesSecurityOptions/InteractiveLogon_MessageTitleForUsersAttemptingToLogOn</li> 
+<li>LocalPoliciesSecurityOptions/NetworkSecurity_AllowPKU2UAuthenticationRequests</li> 
+<li>LocalPoliciesSecurityOptions/RecoveryConsole_AllowAutomaticAdministrativeLogon</li> 
+<li>LocalPoliciesSecurityOptions/Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_AllowUIAccessApplicationsToPromptForElevation</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministrators</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateExecutableFilesThatAreSignedAndValidated</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation</li> 
+<li>LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations</li>
+<li>Privacy/EnableActivityFeed</li>
+<li>Privacy/PublishUserActivities</li>
+<li>Update/DisableDualScan</li>
+<li>Update/AllowAutoWindowsUpdateDownloadOverMeteredNetwork</li>
+</ul>
+<p>Changed the name of new policy to CredentialProviders/DisableAutomaticReDeploymentCredentials from CredentialProviders/EnableWindowsAutoPilotResetCredentials.</p>
+<p>Changed the names of the following policies:</p>
+<ul>
+<li>Defender/GuardedFoldersAllowedApplications to Defender/ControlledFolderAccessAllowedApplications</li>
+<li>Defender/GuardedFoldersList to Defender/ControlledFolderAccessProtectedFolders</li>
+<li>Defender/EnableGuardMyFolders to Defender/EnableControlledFolderAccess</li>
+</ul>
+<p>Added links to the additional [ADMX-backed BitLocker policies](policy-csp-bitlocker.md).</p>
+<p>There were issues reported with the previous release of the following policies. These issues were fixed in Window 10, version 1709:</p>
+<ul>
+<li>Privacy/AllowAutoAcceptPairingAndPrivacyConsentPrompts</li>
+<li>Start/HideAppList</li>
+</ul>
+</td></tr>
+</tbody>
+</table>
+
 ### July 2017
 
 <table>
@@ -1270,8 +1690,70 @@ The DM agent for [push-button reset](https://msdn.microsoft.com/windows/hardware
 <li>When you enable EncryptionMethodByDriveType, you must specify values for all three drives (operating system, fixed data, and removable data), otherwise it will fail (500 return status). For example, if you only set the encrytion method for the OS and removable drives, you will get a 500 return status.</li>
 <li>When you enable SystemDrivesRecoveryMessage, you must specify values for all three settings (pre-boot recovery screen, recovery message, and recovery URL), otherwise it will fail (500 return status). For example, if you only specify values for message and URL, you will get a 500 return status.</li>
 </ul>
-</td>
-</tr>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">[Policy CSP](policy-configuration-service-provider.md)</td>
+<td style="vertical-align:top">
+<p>Added the following new policies for Windows 10, version 1709:</p>
+<ul>
+<li>Education/DefaultPrinterName</li>
+<li>Education/PreventAddingNewPrinters</li>
+<li>Education/PrinterNames</li> 
+<li>Security/ClearTPMIfNotReady</li>
+<li>WindowsDefenderSecurityCenter/CompanyName</li>
+<li>WindowsDefenderSecurityCenter/DisableAppBrowserUI</li>
+<li>WindowsDefenderSecurityCenter/DisableEnhancedNotifications</li>
+<li>WindowsDefenderSecurityCenter/DisableFamilyUI</li>
+<li>WindowsDefenderSecurityCenter/DisableHealthUI</li>
+<li>WindowsDefenderSecurityCenter/DisableNetworkUI</li>
+<li>WindowsDefenderSecurityCenter/DisableNotifications</li>
+<li>WindowsDefenderSecurityCenter/DisableVirusUI</li>
+<li>WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride</li>
+<li>WindowsDefenderSecurityCenter/Email</li>
+<li>WindowsDefenderSecurityCenter/EnableCustomizedToasts</li>
+<li>WindowsDefenderSecurityCenter/EnableInAppCustomization</li>
+<li>WindowsDefenderSecurityCenter/Phone</li>
+<li>WindowsDefenderSecurityCenter/URL</li>
+</ul>
+<p>Experience/AllowFindMyDevice - updated the description to include active digitizers.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[EnterpriseDesktopAppManagement CSP](enterprisedesktopappmanagement-csp.md)</td>
+<td style="vertical-align:top">Added the following statement to [MSI/ProductID/DownloadInstall](enterprisedesktopappmanagement-csp.md#msi-productid-downloadinstall):
+<ul>
+<li>In Windows 10, version 1703 service release, a new tag "DownloadFromAad" was added to the "Enforcement" section of the XML. The default value is 0 (do not send token). This tag is optional and needs to be set to 1 in case the server wants the download URL to get the AADUserToken.</li>
+</ul>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">[EnterpriseAssignedAccess CSP](enterpriseassignedaccess-csp.md)</td>
+<td style="vertical-align:top">Added the following information about the settings pages in AssigneAccessXML:
+<ul>
+<li>Starting in Windows 10, version 1703, you can specify the settings pages using the settings URI. For example, in place of SettingPageDisplay, you would use ms-settings:display. See [ms-settings: URI scheme reference](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) to find the URI for each settings page.</li>
+<li>In Windows 10, version 1703, Quick action settings no longer require any dependencies from related group or page.</li>
+</ul>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[DeviceStatus CSP](devicestatus-csp.md)</td>
+<td style="vertical-align:top"><p>Added the following settings in Windows 10, version 1709:</p>
+<ul>
+<li>DeviceStatus/DomainName</li>
+<li>DeviceStatus/DeviceGuard/VirtualizationBasedSecurityHwReq</li>
+<li>DeviceStatus/DeviceGuard/VirtualizationBasedSecurityStatus</li>
+<li>DeviceStatus/DeviceGuard/LsaCfgCredGuardStatus</li>
+<ul>
+</td></tr>
+<tr class="even">
+<td style="vertical-align:top">[AssignedAccess CSP](assignedaccess-csp.md)</td>
+<td style="vertical-align:top"><p>Here are the changes in Windows 10, version 1709.</p>
+<ul>
+<li>Added Configuration node</li>
+</ul>
+<p>Starting in Windows 10, version 1709, AssignedAccess CSP is supported in Windows 10 Pro.</p>
+</td></tr>
+<tr class="odd">
+<td style="vertical-align:top">[SurfaceHub CSP](surfacehub-csp.md)</td>
+<td style="vertical-align:top"><p>Changed PasswordRotationPeriod to PasswordRotationEnabled.</p>
+</td></tr>
 </tbody>
 </table>
 
@@ -1785,11 +2267,10 @@ Also Added [Firewall DDF file](firewall-ddf-file.md).</td></tr>
 <li>TimeLanguageSettings/AllowSet24HourClock</li>
 <li>Update/ActiveHoursMaxRange</li>
 <li>Update/AutoRestartNotificationSchedule</li>
-<li>Update/AutoRestartNotificationStyle</li>
 <li>Update/AutoRestartRequiredNotificationDismissal</li>
 <li>Update/EngagedRestartDeadline</li>
 <li>Update/EngagedRestartSnoozeSchedule</li>
-<li>Update/EngagedRestartTransistionSchedule</li>
+<li>Update/EngagedRestartTransitionSchedule</li>
 <li>Update/SetAutoRestartNotificationDisable</li>
 <li>WindowsLogon/HideFastUserSwitching</li>
 </ul>
@@ -2520,10 +3001,16 @@ No. Only one MDM is allowed.
 5.  Set quota to unlimited.
 
     ![aad maximum joined devices](images/faq-max-devices.png)
-
  
 
- 
+<a href="" id="dwmapppushsvc "></a>**What is dmwappushsvc?**  
+
+Entry | Description   
+--------------- | --------------------  
+What is dmwappushsvc? | It is a Windows service that ships in Windows 10 operating system as a part of the windows management platform. It is used internally by the operating system as a queue for categorizing and processing all WAP messages, which include Windows management messages, MMS, NabSync, and Service Indication/Service Loading (SI/SL). The service also initiates and orchestrates management sync sessions with the MDM server. |
+What data is handled by dmwappushsvc? | It is a component handling the internal workings of the management platform and involved in processing messages that have been received by the device remotely for management. The messages in the queue are serviced by another component that is also part of the Windows management stack to process messages. The service also routes and authenticates WAP messages received by the device to internal OS components that process them further: MMS, NabSync, SI/SL. |
+How do I turn if off? | The service can be stopped from the "Services" console on the device (Start > Run > services.msc). However, since this is a component part of the OS and  required for the proper functioning of the device, we strongly recommend not to do this. |
+
 
 
 

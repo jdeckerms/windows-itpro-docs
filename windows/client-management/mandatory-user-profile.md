@@ -17,8 +17,7 @@ ms.date: 06/13/2017
 
 -   Windows 10
 
-> [!NOTE]
-> When a mandatory profile is applied to a PC running Windows 10, version 1511, some features such as Universal Windows Platform (UWP) apps, the Start menu, Cortana, and Search, will not work correctly. This will be fixed in a future update. 
+
 
 A mandatory user profile is a roaming user profile that has been pre-configured by an administrator to specify settings for users. Settings commonly defined in a mandatory profile include (but are not limited to): icons that appear on the desktop, desktop backgrounds, user preferences in Control Panel, printer selections, and more. Configuration changes made during a user's session that are normally saved to a roaming user profile are not saved when a mandatory user profile is assigned. 
 
@@ -169,4 +168,4 @@ When a user is configured with a mandatory profile, Windows 10 starts as though 
 - [Windows Spotlight on the lock screen](/windows/configuration/windows-spotlight)
 - [Configure devices without MDM](/windows/configuration/configure-devices-without-mdm)
 
-
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=897&newFeedback=true&topic=mandatory-user-profile.md). 

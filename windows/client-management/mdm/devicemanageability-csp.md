@@ -7,7 +7,7 @@ ms.topic: article
 ms.prod: w10
 ms.technology: windows
 author: nickbrower
-ms.date: 06/19/2017
+ms.date: 11/01/2017
 ---
 
 # DeviceManageability CSP
@@ -30,11 +30,24 @@ Interior node.
 <a href="" id="capabilities-cspversions"></a>**Capabilities/CSPVersions**  
 Returns the versions of all configuration service providers supported on the device for the MDM service.
 
+<a href="" id="capabilities"></a>**Provider**  
+Added in Windows 10, version 1709. Interior node.
 
+<a href="" id="capabilities-cspversions"></a>**Provider/_ProviderID_**  
+Added in Windows 10, version 1709. Provider ID of the configuration source. ProviderID should be unique among the different config sources.
 
- 
+<a href="" id="capabilities-cspversions"></a>**Provider/_ProviderID_/ConfigInfo**  
+Added in Windows 10, version 1709. Configuration information string value set by the configuration source. Recommended to be used during sync session.
 
- 
+ConfigInfo value can only be set by the provider that owns the ProviderID. The value is readable by other config sources.
+
+Data type is string. Supported operations are Add, Get, Delete, and Replace.
+
+<a href="" id="capabilities-cspversions"></a>**Provider/_ProviderID_/EnrollmentInfo**  
+Added in Windows 10, version 1709. Enrollment information string value set by the configuration source and sent during MDM enrollment. It is readable by MDM server during sync session.
+
+Data type is string. Supported operations are Add, Get, Delete, and Replace. 
+
 
 
 

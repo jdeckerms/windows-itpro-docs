@@ -4,7 +4,7 @@ description: You can upgrade to Windows 10 from a previous version of Windows if
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
-localizationpriority: high
+ms.localizationpriority: high
 ms.pagetype: mobile
 author: greg-lindsay
 ---
@@ -32,7 +32,7 @@ D = Edition downgrade; personal data is maintained, applications and settings ar
         <td></td>
         <td>Windows 10 Home</td>
         <td>Windows 10 Pro</td>
-        <td>Windows 10 Pro for Education</td>
+        <td>Windows 10 Pro Education</td>
         <td>Windows 10 Education</td>
         <td>Windows 10 Enterprise</td>
         <td>Windows 10 Mobile</td>
@@ -337,7 +337,7 @@ D = Edition downgrade; personal data is maintained, applications and settings ar
 [Windows 10 deployment scenarios](../windows-10-deployment-scenarios.md)<BR>
 [Windows upgrade and migration considerations](windows-upgrade-and-migration-considerations.md)
  
-
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=897&newFeedback=true&topic=windows-10-upgrade-paths.md).
  
 
 

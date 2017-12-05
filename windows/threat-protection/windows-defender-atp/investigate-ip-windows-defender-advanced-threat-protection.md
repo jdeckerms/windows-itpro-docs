@@ -7,8 +7,10 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
+ms.author: macapara
 author: mjcaparas
-localizationpriority: high
+ms.localizationpriority: high
+ms.date: 10/17/2017
 ---
 # Investigate an IP address associated with a Windows Defender ATP alert
 
@@ -20,21 +22,32 @@ localizationpriority: high
 - Windows 10 Pro Education
 - Windows Defender Advanced Threat Protection (Windows Defender ATP)
 
+
+
+>Want to experience Windows Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-investigateip-abovefoldlink)
+
 Examine possible communication between your machines and external internet protocol (IP) addresses.
 
 Identifying all machines in the organization that communicated with a suspected or known malicious IP address, such as Command and Control (C2) servers, helps determine the potential scope of breach, associated files, and infected machines.
 
 You can find information from the following sections in the IP address view:
 
-- IP address details
+- IP worldwide, Reverse DNS names
+- Alerts related to this IP
 - IP in organization
-- Communication with IP from organization
+- Most recent observed machines with IP
 
-The IP address details section shows attributes of the IP address such as its ASN and its reverse IPs.
+## IP Worldwide and Reverse DNS names
+The IP address details section shows attributes of the IP address such as its ASN and its Reverse DNS names.
 
+## Alerts related to this IP
+The **Alerts related to this IP** section provides a list of alerts that are associated with the IP. 
+
+## IP in organization
 The **IP in organization** section provides details on the prevalence of the IP address in the organization.
 
-The **Communication with IP in organization** section provides a chronological view on the events and associated alerts that were observed on the IP address.
+## Most recent observed machines with IP
+The **Most recent observed machines with IP** section provides a chronological view on the events and associated alerts that were observed on the IP address.
 
 **Investigate an external IP:**
 
@@ -52,7 +65,7 @@ Use the search filters to define the search criteria. You can also use the timel
 Clicking any of the machine names will take you to that machine's view, where you can continue investigate reported alerts, behaviors, and events.
 
 ## Related topics
-- [View the Windows Defender Advanced Threat Protection Dashboard](dashboard-windows-defender-advanced-threat-protection.md)
+- [View the Windows Defender Advanced Threat Protection Security operations dashboard](dashboard-windows-defender-advanced-threat-protection.md)
 - [View and organize the Windows Defender Advanced Threat Protection Alerts queue ](alerts-queue-windows-defender-advanced-threat-protection.md)
 - [Investigate Windows Defender Advanced Threat Protection alerts](investigate-alerts-windows-defender-advanced-threat-protection.md)
 - [Investigate a file associated with a Windows Defender ATP alert](investigate-files-windows-defender-advanced-threat-protection.md)

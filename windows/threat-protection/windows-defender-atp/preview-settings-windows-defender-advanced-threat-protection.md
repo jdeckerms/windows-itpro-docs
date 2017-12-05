@@ -7,8 +7,10 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
+ms.author: macapara
 author: mjcaparas
-localizationpriority: high
+ms.localizationpriority: high
+ms.date: 10/17/2017
 ---
 # Turn on the preview experience in Windows Defender ATP
 
@@ -20,9 +22,17 @@ localizationpriority: high
 - Windows 10 Pro Education
 - Windows Defender Advanced Threat Protection (Windows Defender ATP)
 
+
+
+>Want to experience Windows Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-previewsettings-abovefoldlink)
+
 Turn on the preview experience setting to be among the first to try upcoming features.
 
 1. In the navigation pane, select **Preferences setup** > **Preview experience**.
+
+    ![Image of Preferences setup and preview experience](images/atp-preview-features.png)
+
+
 2. Toggle the setting between **On** and **Off** and select **Save preferences**.
 
 ## Related topics
@@ -31,3 +41,4 @@ Turn on the preview experience setting to be among the first to try upcoming fea
 - [Configure email notifications in Windows Defender ATP](configure-email-notifications-windows-defender-advanced-threat-protection.md)
 - [Enable SIEM integration in Windows Defender ATP](enable-siem-integration-windows-defender-advanced-threat-protection.md)
 - [Enable the custom threat intelligence API in Windows Defender ATP](enable-custom-ti-windows-defender-advanced-threat-protection.md)
+- [Create and build Power BI reports](powerbi-reports-windows-defender-advanced-threat-protection.md)

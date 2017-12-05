@@ -8,26 +8,68 @@ ms.sitesec: library
 ms.pagetype: surfacehub
 author: jdeckerms
 ms.author: jdecker
-ms.date: 06/19/2017
-localizationpriority: medium
+ms.date: 10/24/2017
+ms.localizationpriority: medium
 ---
 
 # Change history for Surface Hub
 
 This topic lists new and updated topics in the [Surface Hub Admin Guide]( surface-hub-administrators-guide.md).
 
+## November 2017
+
+New or changed topic | Description 
+--- | ---
+[Enable 802.1x wired authentication](enable-8021x-wired-authentication.md) | New
+[Manage settings with an MDM provider (Surface Hub)](manage-settings-with-mdm-for-surface-hub.md) | Added settings for 802.1x wired authentication.
+
+## October 2017
+
+New or changed topic | Description |
+--- | ---
+[Install apps on your Microsoft Surface Hub](install-apps-on-surface-hub.md) | Updated instructions to use Windows Team device family
+[Hybrid deployment](hybrid-deployment-surface-hub-device-accounts.md) | Updated the instructions for Exchange on-premises 
+[Create a device account using UI](create-a-device-account-using-office-365.md) | Updated the instructions
+[Differences between Surface Hub and Windows 10 Enterprise](differences-between-surface-hub-and-windows-10-enterprise.md)  | Clarified user sign-in on Surface Hub
+[Set up and use Whiteboard to Whiteboard collaboration](whiteboard-collaboration.md) | Removed **How to control and manage Whiteboard to Whiteboard collaboration** due to issues with the EnterpriseModernAppmanagement CSP losing state during End Session. 
+| [Manage settings with an MDM provider (Surface Hub)](manage-settings-with-mdm-for-surface-hub.md) | Removed settings for managing Whiteboard collaboration. |
+[Top support solutions for Surface Hub](support-solutions-surface-hub.md) | Added link to Surface Hub warranty information
+
+
+## September 2017
+
+New or changed topic | Description
+--- | ---
+[Top support solutions for Surface Hub](support-solutions-surface-hub.md) | New
+[PowerShell for Surface Hub](appendix-a-powershell-scripts-for-surface-hub.md) | Updated account creation scripts
+
+## August 2017
+
+
+| New or changed topic | Description |
+| --- | --- |
+[Accessibility](accessibility-surface-hub.md) | Added information about Narrator
+[Sign in to Surface Hub with Microsoft Authenticator](surface-hub-authenticator-app.md) | New
+
+
+
+
+
 ## July 2017
 
 | New or changed topic | Description |
 | --- | --- |
 | [Windows updates](manage-windows-updates-for-surface-hub.md) | Changed deferral recommendations for Windows Updates |
+| [Set up and use Whiteboard to Whiteboard collaboration](whiteboard-collaboration.md) | Added Whiteboard URLs to prerequisites |
+| [Hybrid deployment](hybrid-deployment-surface-hub-device-accounts.md#skype-for-business-online) | Updated the Skype for Business Online requirements |
+| [Prepare your environment for Surface Hub](prepare-your-environment-for-surface-hub.md)  | Added that Surface Hub supports 802.1X using PEAP-MSCHAPv2 |
 
 ## June 2017
 
 | New or changed topic | Description |
 | --- | --- |
 | [Set up and use Whiteboard to Whiteboard collaboration](whiteboard-collaboration.md) | New |
-| [Manage settings with an MDM provider (Surface Hub)](manage-settings-with-mdm-for-surface-hub.md#whiteboard-collaboration-settings) | Added settings for managing Whiteboard collaboration |
+| [Manage settings with an MDM provider (Surface Hub)](manage-settings-with-mdm-for-surface-hub.md) | Added settings for managing Whiteboard collaboration |
 
 ## RELEASE: Windows 10, version 1703
 

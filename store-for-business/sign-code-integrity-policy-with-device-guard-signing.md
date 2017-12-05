@@ -7,7 +7,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: store, security
 author: TrudyHa
-localizationpriority: high
+ms.localizationpriority: high
 ---
 
 # Sign code integrity policy with Device Guard signing
@@ -25,7 +25,7 @@ Before you get started, be sure to review these best practices:
 **Best practices**
 
 - Test your code integrity policies on a group of devices before deploying them to a large group of devices.
-- Use rule options 9 and 10 during testing. For more information, see the section Code integrity policy rules in the [Device Guard deployment guide](https://technet.microsoft.com/library/mt463091.aspx).
+- Use rule options 9 and 10 during testing. For more information, see the section Code integrity policy rules in the [Device Guard deployment guide](https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide).
 
 **To sign a code integrity policy**
 

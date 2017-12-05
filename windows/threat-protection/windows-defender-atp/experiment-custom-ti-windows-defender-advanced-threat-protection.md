@@ -7,8 +7,10 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
+ms.author: macapara
 author: mjcaparas
-localizationpriority: high
+ms.localizationpriority: high
+ms.date: 10/17/2017
 ---
 
 # Experiment with custom threat intelligence (TI) alerts
@@ -21,6 +23,9 @@ localizationpriority: high
 - Windows 10 Pro Education
 - Windows Defender Advanced Threat Protection (Windows Defender ATP)
 
+
+
+>Want to experience Windows Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-experimentcustomti-abovefoldlink) 
 
 With the Windows Defender ATP threat intelligence API, you can create custom threat intelligence alerts that can help you keep track of possible attack activities in your organization.  
 
@@ -143,7 +148,7 @@ This step will guide you in exploring the custom alert in the portal.
     ![Image of sample custom ti alert in the portal](images/atp-sample-custom-ti-alert.png)
 
 > [!NOTE]
-> It can take up to 15 minutes for the alert to appear in the portal.
+> There is a latency time of approximately 20 minutes between the the time a custom TI is introduced and when it becomes effective.
 
 ## Related topics
 - [Understand threat intelligence concepts](threat-indicator-concepts-windows-defender-advanced-threat-protection.md)

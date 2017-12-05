@@ -5,10 +5,11 @@ ms.assetid: 9da2fb57-f2ff-4fce-a858-4ae4c237b5aa
 keywords: deploy, deployment, configure, customize, install, installation
 ms.prod: w10
 ms.mktglfcycl: deploy
-localizationpriority: high
+ms.localizationpriority: high
 ms.sitesec: library
 ms.pagetype: mdt
 author: mtniehaus
+ms.date: 11/08/2017
 ---
 
 # Create a Windows 10 reference image
@@ -19,8 +20,8 @@ author: mtniehaus
 Creating a reference image is important because that image serves as the foundation for the devices in your organization. In this topic, you will learn how to create a Windows 10 reference image using the Microsoft Deployment Toolkit (MDT). You will create a deployment share, configure rules and settings, and import all the applications and operating system files required to build a Windows 10 reference image. After completing the steps outlined in this topic, you will have a Windows 10 reference image that can be used in your deployment solution.
 For the purposes of this topic, we will use four machines: DC01, MDT01, HV01, and PC0001. DC01 is a domain controller, PC0001 is a Windows 10 Enterprise x64 client, and MDT01 is a Windows Server 2012 R2 standard server. HV01 is a Hyper-V host server, but HV01 could be replaced by PC0001 as long as PC0001 has enough memory and is capable of running Hyper-V. MDT01, HV01, and PC0001 are members of the domain contoso.com for the fictitious Contoso Corporation.
 
-**Note**  
-For important details about the setup for the steps outlined in this article, please see [Deploy Windows 10 with the Microsoft Deployment Toolkit](deploy-windows-10-with-the-microsoft-deployment-toolkit.md#proof).
+>{!NOTE]}  
+>For important details about the setup for the steps outlined in this article, please see [Deploy Windows 10 with the Microsoft Deployment Toolkit](deploy-windows-10-with-the-microsoft-deployment-toolkit.md#proof).
  
 ![figure 1](../images/mdt-08-fig01.png)
 
@@ -75,8 +76,8 @@ This section will show you how to populate the MDT deployment share with the Win
 
 MDT supports adding both full source Windows 10 DVDs (ISOs) and custom images that you have created. In this case, you create a reference image, so you add the full source setup files from Microsoft.
 
-**Note**  
-Due to the Windows limits on path length, we are purposely keeping the operating system destination directory short, using the folder name W10EX64RTM rather than a more descriptive name like Windows 10 Enterprise x64 RTM.
+>[!OTE]  
+>Due to the Windows limits on path length, we are purposely keeping the operating system destination directory short, using the folder name W10EX64RTM rather than a more descriptive name like Windows 10 Enterprise x64 RTM.
  
 ### Add Windows 10 Enterprise x64 (full source)
 
@@ -115,8 +116,8 @@ By storing configuration items as MDT applications, it is easy to move these obj
 
 In these examples, we assume that you downloaded the software in this list to the E:\\Downloads folder. The first application is added using the UI, but because MDT supports Windows PowerShell, you add the other applications using Windows PowerShell.
 
-**Note**  
-All the Microsoft Visual C++ downloads can be found on [The latest supported Visual C++ downloads](https://go.microsoft.com/fwlink/p/?LinkId=619523).
+>[!NOTE]  
+>All the Microsoft Visual C++ downloads can be found on [The latest supported Visual C++ downloads](https://go.microsoft.com/fwlink/p/?LinkId=619523).
  
 ### Create the install: Microsoft Office Professional Plus 2013 x86
 
@@ -329,7 +330,7 @@ The steps below walk you through the process of editing the Windows 10 referenc
          
     5.  State Restore / Custom Tasks (Pre-Windows Update). Add a new Install Roles and Features action with the following settings:
         1.  Name: Install - Microsoft NET Framework 3.5.1
-        2.  Select the operating system for which roles are to be installed: Windows 8.1
+        2.  Select the operating system for which roles are to be installed: Windows 10
         3.  Select the roles and features that should be installed: .NET Framework 3.5 (includes .NET 2.0 and 3.0)
         
         **Important**  
@@ -371,8 +372,11 @@ Figure 9. The Windows 10 desktop with the Resume Task Sequence shortcut.
 
 When using MDT, you don't need to edit the Unattend.xml file very often because most configurations are taken care of by MDT. However if, for example, you want to configure Internet Explorer 11 behavior, then you can edit the Unattend.xml for this. Editing the Unattend.xml for basic Internet Explorer settings is easy, but for more advanced settings, you will want to use Internet Explorer Administration Kit (IEAK).
 
-**Note**  
-You also can use the Unattend.xml to enable components in Windows 10, like the Telnet Client or Hyper-V client. Normally we prefer to do this via the Install Roles and Features action, or using Deployment Image Servicing and Management (DISM) command-line tools, because then we can add that as an application, being dynamic, having conditions, and so forth. Also, if you are adding packages via Unattend.xml, it is version specific, so Unattend.xml must match the exact version of the operating system you are servicing.
+>[!WARNING]
+>Do not use **SkipMachineOOBE** or **SkipUserOOBE** in your Unattend.xml file. These settings are deprecated and can have unintended effects if used.
+
+>[!NOTE]  
+>You also can use the Unattend.xml to enable components in Windows 10, like the Telnet Client or Hyper-V client. Normally we prefer to do this via the **Install Roles and Features** action, or using Deployment Image Servicing and Management (DISM) command-line tools, because then we can add that as an application, being dynamic, having conditions, and so forth. Also, if you are adding packages via Unattend.xml, it is version specific, so Unattend.xml must match the exact version of the operating system you are servicing.
  
 Follow these steps to configure Internet Explorer settings in Unattend.xml for the Windows 10 Enterprise x64 RTM Default Image task sequence:
 
@@ -465,19 +469,19 @@ For that reason, add only a minimal set of rules to Bootstrap.ini, such as which
     2.  ISO file name: MDT Build Lab x64.iso
 8.  Click **OK**.
 
-**Note**  
-In MDT, the x86 boot image can deploy both x86 and x64 operating systems (except on computers based on Unified Extensible Firmware Interface).
+>[!NOTE]  
+>In MDT, the x86 boot image can deploy both x86 and x64 operating systems (except on computers based on Unified Extensible Firmware Interface).
  
 
 ### Update the deployment share
 
-After the deployment share has been configured, it needs to be updated. This is the process when the Windows Windows PE boot images are created.
+After the deployment share has been configured, it needs to be updated. This is the process when the Windows PE boot images are created.
 
 1.  Using the Deployment Workbench, right-click the **MDT Build Lab deployment share** and select **Update Deployment Share**.
 2.  Use the default options for the Update Deployment Share Wizard.
 
-**Note**  
-The update process will take 5 to 10 minutes.
+>[!NOTE]  
+>The update process will take 5 to 10 minutes.
  
 ### The rules explained
 
@@ -487,8 +491,8 @@ The Bootstrap.ini and CustomSettings.ini files work together. The Bootstrap.ini 
 
 The CustomSettings.ini file is normally stored on the server, in the Deployment share\\Control folder, but also can be stored on the media (when using offline media).
 
-**Note**  
-The settings, or properties, that are used in the rules (CustomSettings.ini and Bootstrap.ini) are listed in the MDT documentation, in the Microsoft Deployment Toolkit Reference / Properties / Property Definition section.
+>[!NOTE]  
+>The settings, or properties, that are used in the rules (CustomSettings.ini and Bootstrap.ini) are listed in the MDT documentation, in the Microsoft Deployment Toolkit Reference / Properties / Property Definition section.
  
 ### The Bootstrap.ini file
 
@@ -515,8 +519,8 @@ So, what are these settings?
      
 -   **SkipBDDWelcome.** Even if it is nice to be welcomed every time we start a deployment, we prefer to skip the initial welcome page of the Windows Deployment Wizard.
 
-**Note**  
-All properties beginning with "Skip" control only whether to display that pane in the Windows Deployment Wizard. Most of the panes also require you to actually set one or more values.
+>[!NOTE]  
+>All properties beginning with "Skip" control only whether to display that pane in the Windows Deployment Wizard. Most of the panes also require you to actually set one or more values.
  
 ### The CustomSettings.ini file
 
@@ -566,7 +570,7 @@ SkipFinalSummary=YES
     The easiest way to find the current time zone name on a Windows 10 machine is to run tzutil /g in a command prompt. You can also run tzutil /l to get a listing of all available time zone names.
      
 -   **JoinWorkgroup.** Configures Windows to join a workgroup.
--   **HideShell.** Hides the Windows Shell during deployment. This is especially useful for Windows 8.1 deployments in which the deployment wizard will otherwise appear behind the tiles.
+-   **HideShell.** Hides the Windows Shell during deployment. This is especially useful for Windows 10 deployments in which the deployment wizard will otherwise appear behind the tiles.
 -   **FinishAction.** Instructs MDT what to do when the task sequence is complete.
 -   **DoNotCreateExtraPartition.** Configures the task sequence not to create the extra partition for BitLocker. There is no need to do this for your reference image.
 -   **WSUSServer.** Specifies which Windows Server Update Services (WSUS) server (and port, if needed) to use during the deployment. Without this option MDT will use Microsoft Update directly, which will increase deployment time and limit your options of controlling which updates are applied.
@@ -642,3 +646,5 @@ After some time, you will have a Windows 10 Enterprise x64 image that is fully 
 [Replace a Windows 7 computer with a Windows 10 computer](replace-a-windows-7-computer-with-a-windows-10-computer.md)
 
 [Configure MDT settings](configure-mdt-settings.md)
+
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=897&newFeedback=true&topic=create-a-windows-10-reference-image.md).

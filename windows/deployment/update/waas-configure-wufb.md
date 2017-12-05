@@ -5,8 +5,9 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 author: DaniHalfin
-localizationpriority: high
+ms.localizationpriority: high
 ms.author: daniha
+ms.date: 07/27/2017
 ---
 
 # Configure Windows Update for Business
@@ -18,6 +19,11 @@ ms.author: daniha
 - Windows 10 Mobile
 
 > **Looking for consumer information?** See [Windows Update: FAQ](https://support.microsoft.com/help/12373/windows-update-faq) 
+
+>[!IMPORTANT]
+>Due to [naming changes](waas-overview.md#naming-changes), older terms like CB,CBB and LTSB may still be displayed in some of our products.
+>
+>In the following settings CB refers to Semi-Annual Channel (Targeted), while CBB refers to Semi-Annual Channel.
 
 You can use Group Policy or your mobile device management (MDM) service to configure Windows Update for Business settings for your devices. The sections in this topic provide the Group Policy and MDM policies for Windows 10, version 1511 and above. The MDM policies use the OMA-URI setting from the [Policy CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn904962.aspx).  
 
@@ -36,7 +42,7 @@ By grouping devices with similar deferral periods, administrators are able to cl
 <span id="configure-devices-for-current-branch-or-current-branch-for-business"/>
 ## Configure devices for Current Branch (CB) or Current Branch for Business (CBB)
 
-With Windows Update for Business, you can set a device to be on either the Current Branch (CB) or the Current Branch for Business (CBB) servicing branch. For more information on this servicing model, see [Windows 10 servicing options](waas-overview.md#servicing-branches). 
+With Windows Update for Business, you can set a device to be on either the Current Branch (CB) or the Current Branch for Business (CBB) servicing branch. For more information on this servicing model, see [Windows 10 servicing options](waas-overview.md#servicing-channels). 
 
 **Release branch policies**
 
@@ -184,6 +190,23 @@ With version 1703, pausing through the settings app will provide a more consiste
 - Any pending update installations are canceled
 - Any update installation running when pause is activated will attempt to rollback
 
+## Configure when devices receive Windows Insider preview builds
+
+Starting with Windows 10, version 1709, you can set policies to manage preview builds and their delivery:
+
+The **Manage preview builds** setting gives administrators control over enabling or disabling preview build installation on a device. You can also decide to stop preview builds once the release is public.
+* Group Policy: **Computer Configuration/Administrative Templates/Windows Components/Windows Update/Windows Update for Business** - *Manage preview builds*
+* MDM: **Update/ManagePreviewBuilds**
+
+>[!IMPORTANT]
+>This policy replaces the "Toggle user control over Insider builds" policy under that is only supported up to Windows 10, version 1703. You can find the older policy here:
+>* Group Policy: **Computer Configuration/Administrative Templates/Windows Components/Data Collection and Preview Builds/Toggle user control over Insider builds**
+>* MDM: **System/AllowBuildPreview**
+
+The policy settings to **Select when Feature Updates are received** allows you to choose between preview flight rings, and allows you to defer or pause their delivery.
+* Group Policy: **Computer Configuration/Administrative Templates/Windows Components/Windows Update/ Windows Update for Business** - *Select when Preview Builds and Feature Updates are received*
+* MDM: **Update/BranchReadinessLevel**
+
 ## Exclude drivers from Quality Updates
 
 In Windows 10, starting with version 1607, you can selectively option out of receiving driver update packages as part of your normal quality update cycle.  This policy will not pertain to updates to inbox drivers (which will be packaged within a security or critical update) or to Feature Updates, where drivers may be dynamically installed to ensure the Feature Update process can complete.
@@ -257,7 +280,7 @@ In the Windows Update for Business policies in version 1511, all the deferral ru
 - [Overview of Windows as a service](waas-overview.md)
 - [Prepare servicing strategy for Windows 10 updates](waas-servicing-strategy-windows-10-updates.md)
 - [Build deployment rings for Windows 10 updates](waas-deployment-rings-windows-10-updates.md)
-- [Assign devices to servicing branches for Windows 10 updates](waas-servicing-branches-windows-10-updates.md)
+- [Assign devices to servicing channels for Windows 10 updates](waas-servicing-channels-windows-10-updates.md)
 - [Optimize update delivery for Windows 10 updates](waas-optimize-windows-10-updates.md)
 - [Configure Delivery Optimization for Windows 10 updates](waas-delivery-optimization.md)
 - [Configure BranchCache for Windows 10 updates](waas-branchcache.md)

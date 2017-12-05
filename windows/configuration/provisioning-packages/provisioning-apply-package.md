@@ -5,7 +5,7 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 author: jdeckerms
-localizationpriority: high
+ms.localizationpriority: high
 ---
 
 # Apply a provisioning package
@@ -18,7 +18,13 @@ localizationpriority: high
 
 Provisioning packages can be applied to a device during the first-run experience (out-of-box experience or "OOBE") and after ("runtime").
 
+>[!NOTE]
+>Applying a provisioning package to a desktop device requires administrator privileges on the device.
+
 ## Desktop editions
+
+>[!NOTE]
+>In Windows 10, version 1709, you can interrupt a long-running provisioning process by pressing ESC.
 
 ### During initial setup, from a USB drive
 

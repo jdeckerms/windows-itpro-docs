@@ -7,7 +7,7 @@ ms.mktglfcycl: explore
 ms.sitesec: library
 ms.pagetype: security
 author: eross-msft
-localizationpriority: high
+ms.localizationpriority: high
 ---
 
 # Set up and use Windows Defender SmartScreen on individual devices
@@ -47,9 +47,9 @@ Starting with Windows 10, version 1703 your employees can use Windows Defender S
         
         - **Off.** Turns off SmartScreen, so an employee isn't alerted or stopped from downloading potentially malicious apps and files.    
 
-    - In the **SmartScreen from Windows Store apps** area:
+    - In the **SmartScreen from Microsoft Store apps** area:
         
-        - **Block** or **Warn.** Warns employees that the sites and downloads used by Windows Store apps are potentially dangerous, but allows the action to continue.
+        - **Block** or **Warn.** Warns employees that the sites and downloads used by Microsoft Store apps are potentially dangerous, but allows the action to continue.
         
         - **Off.** Turns off SmartScreen, so an employee isn't alerted or stopped from visiting sites or from downloading potentially malicious apps and files.
 

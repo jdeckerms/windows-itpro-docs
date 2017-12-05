@@ -6,7 +6,7 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 author: TrudyHa
-localizationpriority: high
+ms.localizationpriority: high
 ---
 
 # What's new in Windows 10, version 1607
@@ -15,8 +15,9 @@ Below is a list of some of the new and updated features in Windows 10, version 1
 
 >[!NOTE]
 >For release dates and servicing options for each version, see [Windows 10 release information](https://technet.microsoft.com/en-us/windows/release-info).
- 
- 
+
+Not finding content you need? Windows 10 users, tell us what you want on [Feedback Hub](feedback-hub://?referrer=techDocsUcPage&tabid=2&contextid=897&newFeedback=true&topic=whats-new-windows-10-version-1607.md). 
+  
 ## Deployment
 
 ### Windows Imaging and Configuration Designer (ICD)
@@ -31,13 +32,13 @@ Windows ICD now includes simplified workflows for creating provisioning packages
 
 [Learn more about using provisioning packages in Windows 10.](/windows/configuration/provisioning-packages/provisioning-packages)
 
-### Windows Upgrade Analytics
+### Windows Upgrade Readiness
 
-Microsoft developed Upgrade Analytics in response to demand from enterprise customers looking for additional direction and details about upgrading to Windows 10. Upgrade Analytics was built taking into account multiple channels of customer feedback, testing, and Microsoft’s experience upgrading millions of devices to Windows 10. 
+Microsoft developed Upgrade Readiness in response to demand from enterprise customers looking for additional direction and details about upgrading to Windows 10. Upgrade Readiness was built taking into account multiple channels of customer feedback, testing, and Microsoft’s experience upgrading millions of devices to Windows 10. 
 
-With Windows telemetry enabled, Upgrade Analytics collects system, application, and driver data for analysis. We then identify compatibility issues that can block an upgrade and suggest fixes when they are known to Microsoft.
+With Windows telemetry enabled, Upgrade Readiness collects system, application, and driver data for analysis. We then identify compatibility issues that can block an upgrade and suggest fixes when they are known to Microsoft.
 
-Use Upgrade Analytics to get:
+Use Upgrade Readiness to get:
 
 - A visual workflow that guides you from pilot to production
 - Detailed computer and application inventory
@@ -47,9 +48,9 @@ Use Upgrade Analytics to get:
 - Application usage information, allowing targeted validation; workflow to track validation progress and decisions
 - Data export to commonly used software deployment tools
 
-The Upgrade Analytics workflow steps you through the discovery and rationalization process until you have a list of computers that are upgrade-ready.
+The Upgrade Readiness workflow steps you through the discovery and rationalization process until you have a list of computers that are upgrade-ready.
 
-[Learn more about planning and managing Windows upgrades with Windows Upgrade Analytics.](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-analytics)
+[Learn more about planning and managing Windows upgrades with Windows Upgrade Readiness.](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness)
 
 ## Windows updates
 
@@ -102,7 +103,7 @@ Several new features and management options have been added to Windows Defender 
 
 - [Windows Defender Offline in Windows 10](/windows/threat-protection/windows-defender-antivirus/windows-defender-offline) can be run directly from within Windows, without having to create bootable media.
 - [Use PowerShell cmdlets for Windows Defender](/windows/threat-protection/windows-defender-antivirus/use-powershell-cmdlets-windows-defender-antivirus) to configure options and run scans.
-- [Enable the Block at First Sight feature in Windows 10](/windows/threat-protection/windows-defender-antivirus/windows-defender-block-at-first-sight) to leverage the Windows Defender cloud for near-instant protection against new malware.
+- [Enable the Block at First Sight feature in Windows 10](/windows/threat-protection/windows-defender-antivirus/configure-block-at-first-sight-windows-defender-antivirus) to leverage the Windows Defender cloud for near-instant protection against new malware.
 - [Configure enhanced notifications for Windows Defender in Windows 10](/windows/threat-protection/windows-defender-antivirus/configure-notifications-windows-defender-antivirus) to see more informaiton about threat detections and removal.
 - [Run a Windows Defender scan from the command line](/windows/threat-protection/windows-defender-antivirus/command-line-arguments-windows-defender-antivirus).
 - [Detect and block Potentially Unwanted Applications with Windows Defender](/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus) during download and install times.
@@ -133,7 +134,7 @@ Windows 10, Version 1607, introduces shared PC mode, which optimizes Windows 10 
 
 ### Application Virtualization (App-V) for Windows 10
 
-Application Virtualization (App-V) enables organizations to deliver Win32 applications to users as virtual applications. Virtual applications are installed on centrally managed servers and delivered to users as a service – in real time and on as as-needed basis. Users launch virtual applications from familiar access points, including the Windows Store, and interact with them as if they were installed locally.
+Application Virtualization (App-V) enables organizations to deliver Win32 applications to users as virtual applications. Virtual applications are installed on centrally managed servers and delivered to users as a service – in real time and on as as-needed basis. Users launch virtual applications from familiar access points, including the Microsoft Store, and interact with them as if they were installed locally.
 
 With the release of Windows 10, version 1607, App-V is included with the Windows 10 for Enterprise edition. If you are new to Windows 10 and App-V or if you're upgrading from a previous version of App-V, you’ll need to download, activate, and install server- and client-side components to start delivering virtual applications to users. 
 
@@ -141,7 +142,7 @@ With the release of Windows 10, version 1607, App-V is included with the Windows
 
 ### User Experience Virtualization (UE-V) for Windows 10
 
-Many users customize their settings for Windows and for specific applications. Customizable Windows settings include Windows Store appearance, language, background picture, font size, and accent colors. Customizable application settings include language, appearance, behavior, and user interface options. 
+Many users customize their settings for Windows and for specific applications. Customizable Windows settings include Microsoft Store appearance, language, background picture, font size, and accent colors. Customizable application settings include language, appearance, behavior, and user interface options. 
 
 With User Experience Virtualization (UE-V), you can capture user-customized Windows and application settings and store them on a centrally managed network file share. When users log on, their personalized settings are applied to their work session, regardless of which device or virtual desktop infrastructure (VDI) sessions they log on to.
 

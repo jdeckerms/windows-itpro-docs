@@ -89,11 +89,12 @@
 #### [AppLocker Settings](applocker\applocker-settings.md)
 
 ## [BitLocker](bitlocker\bitlocker-overview.md)
-### [Overview of BitLocker and device encryption in Windows 10](bitlocker\bitlocker-device-encryption-overview-windows-10.md)
+### [Overview of BitLocker Device Encryption in Windows 10](bitlocker\bitlocker-device-encryption-overview-windows-10.md)
 ### [BitLocker frequently asked questions (FAQ)](bitlocker\bitlocker-frequently-asked-questions.md)
 ### [Prepare your organization for BitLocker: Planning and policies](bitlocker\prepare-your-organization-for-bitlocker-planning-and-policies.md)
 ### [BitLocker basic deployment](bitlocker\bitlocker-basic-deployment.md)
 ### [BitLocker: How to deploy on Windows Server 2012 and later](bitlocker\bitlocker-how-to-deploy-on-windows-server.md)
+### [BitLocker: Management recommendations for enterprises](bitlocker\bitlocker-management-for-enterprises.md)
 ### [BitLocker: How to enable Network Unlock](bitlocker\bitlocker-how-to-enable-network-unlock.md)
 ### [BitLocker: Use BitLocker Drive Encryption Tools to manage BitLocker](bitlocker\bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker.md)
 ### [BitLocker: Use BitLocker Recovery Password Viewer](bitlocker\bitlocker-use-bitlocker-recovery-password-viewer.md)
@@ -124,6 +125,7 @@
 
 ## [Encrypted Hard Drive](encrypted-hard-drive.md)
 
+## [Enable HVCI](enable-virtualization-based-protection-of-code-integrity.md)
 
 ## [Security auditing](auditing\security-auditing-overview.md)
 ### [Basic security audit policies](auditing\basic-security-audit-policies.md)
@@ -650,6 +652,7 @@
 ## [Trusted Platform Module](tpm/trusted-platform-module-top-node.md)
 ### [Trusted Platform Module Overview](tpm/trusted-platform-module-overview.md)
 ### [TPM fundamentals](tpm/tpm-fundamentals.md)
+### [How Windows 10 uses the TPM](tpm/how-windows-uses-the-tpm.md)
 ### [TPM Group Policy settings](tpm/trusted-platform-module-services-group-policy-settings.md)
 ### [Back up the TPM recovery information to AD DS](tpm/backup-tpm-recovery-information-to-ad-ds.md)
 ### [Manage TPM commands](tpm/manage-tpm-commands.md)
@@ -660,6 +663,8 @@
 ### [TPM recommendations](tpm/tpm-recommendations.md)
 
 ## [Windows security baselines](windows-security-baselines.md)
+### [Security Compliance Toolkit](security-compliance-toolkit-10.md)
+### [Get support](get-support-for-security-baselines.md)
 
 ## [Windows 10 Mobile security guide](windows-10-mobile-security-guide.md)
 

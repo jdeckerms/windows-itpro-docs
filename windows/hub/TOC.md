@@ -1,4 +1,5 @@
 # [Windows 10 and Windows 10 Mobile](index.md)
+## [Get started](/windows/whats-new/get-started-with-1709)
 ## [What's new](/windows/whats-new)
 ## [Deployment](/windows/deployment)
 ## [Configuration](/windows/configuration)
@@ -7,3 +8,4 @@
 ## [Access protection](/windows/access-protection)
 ## [Device security](/windows/device-security)
 ## [Threat protection](/windows/threat-protection)
+## [Troubleshooting](/windows/client-management/windows-10-support-solutions)

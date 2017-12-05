@@ -7,8 +7,10 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
+ms.author: macapara
 author: mjcaparas
-localizationpriority: high
+ms.localizationpriority: high
+ms.date: 10/17/2017
 ---
 
 # Assign user access to the Windows Defender ATP portal
@@ -21,6 +23,10 @@ localizationpriority: high
 - Azure Active Directory
 - Office 365
 - Windows Defender Advanced Threat Protection (Windows Defender ATP)
+
+
+
+>Want to experience Windows Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 Windows Defender ATP users and access permissions are managed in Azure Active Directory (AAD). Use the following methods to assign security roles.
 
@@ -77,4 +83,7 @@ For more information see, [Manage Azure AD group and role membership](https://te
 
 7.	Under **Directory role**, select **Limited administrator**, then **Security Reader** or **Security Administrator**.
 
-![Image of Microsoft Azure portal](images/atp-azure-ui-user-access.png)
+    ![Image of Microsoft Azure portal](images/atp-azure-ui-user-access.png)
+
+
+>Want to experience Windows Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-portalaccess-belowfoldlink)

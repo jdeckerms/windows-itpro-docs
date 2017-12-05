@@ -7,8 +7,10 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
+ms.author: macapara
 author: mjcaparas
-localizationpriority: high
+ms.localizationpriority: high
+ms.date: 10/17/2017
 ---
 # Investigate a domain associated with a Windows Defender ATP alert
 
@@ -20,20 +22,32 @@ localizationpriority: high
 - Windows 10 Pro Education
 - Windows Defender Advanced Threat Protection (Windows Defender ATP)
 
+
+
+>Want to experience Windows Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-investigatedomain-abovefoldlink) 
+
 Investigate a domain to see if machines and servers in your enterprise network have been communicating with a known malicious domain.
+
+You can investigate a domain by using the search feature or by clicking on a domain link from the **Machine timeline**.
 
 You can see information from the following sections in the URL view:
 
-- URL details
+- URL details, Contacts, Nameservers
+- Alerts related to this URL 
 - URL in organization
-- Prevalence in organization
-- Communication with URL from organization
+- Most recent observed machines with URL
 
-The URL address details section shows attributes of the URL such as its contacts and nameservers.
+## URL Worldwide 
+The URL details, contacts, and nameservers sections display various attributes about the URL. 
 
+## Alerts related to this URL
+The **Alerts related to this URL** section provides a list of alerts that are associated with the URL. 
+
+## URL in organization
 The **URL in organization** section provides details on the prevalence of the URL in the organization.
 
-The **Communication with URL in organization** section provides a chronological view on the events and associated alerts that were observed on the URL.
+## Most recent observed machinew with URL
+The **Most recent observed machinew with URL** section provides a chronological view on the events and associated alerts that were observed on the URL.
 
 **Investigate a domain:**
 
@@ -44,7 +58,7 @@ The **Communication with URL in organization** section provides a chronological 
 5. Clicking any of the machine names will take you to that machine's view, where you can continue investigate reported alerts, behaviors, and events.
 
 ## Related topics
-- [View the Windows Defender Advanced Threat Protection Dashboard](dashboard-windows-defender-advanced-threat-protection.md)
+- [View the Windows Defender Advanced Threat Protection Security operations dashboard](dashboard-windows-defender-advanced-threat-protection.md)
 - [View and organize the Windows Defender Advanced Threat Protection Alerts queue ](alerts-queue-windows-defender-advanced-threat-protection.md)
 - [Investigate Windows Defender Advanced Threat Protection alerts](investigate-alerts-windows-defender-advanced-threat-protection.md)
 - [Investigate a file associated with a Windows Defender ATP alert](investigate-files-windows-defender-advanced-threat-protection.md)

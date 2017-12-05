@@ -1,11 +1,12 @@
 ---
 title: Deploy catalog files to support code integrity policies (Windows 10)
-description: This article describes how to deploy catalog files to support code integrity policies, one of the main features that are part of Device Guard in Windows 10. 
+description: This article describes how to deploy catalog files to support code integrity policies, one of the main features that are part of Windows Defender Device Guard in Windows 10. 
 keywords: virtualization, security, malware
 ms.prod: w10
 ms.mktglfcycl: deploy
-localizationpriority: high
+ms.localizationpriority: high
 author: brianlic-msft
+ms.date: 10/20/2017
 ---
 
 # Deploy catalog files to support code integrity policies
@@ -16,7 +17,7 @@ author: brianlic-msft
 
 Catalog files can be important in your deployment of code integrity polices if you have unsigned line-of-business (LOB) applications for which the process of signing is difficult. To prepare to create code integrity policies that allow these trusted applications but block unsigned code (most malware is unsigned), you create a *catalog file* that contains information about the trusted applications. After you sign and distribute the catalog, your trusted applications can be handled by code integrity policies in the same way as any other signed application. With this foundation, you can more easily block all unsigned applications, allowing only signed applications to run.
 
-For more description of catalog files, see [Reviewing your applications: application signing and catalog files](requirements-and-deployment-planning-guidelines-for-device-guard.md#reviewing-your-applications-application-signing-and-catalog-files) in "Requirements and deployment planning guidelines for Device Guard." 
+For more description of catalog files, see [Reviewing your applications: application signing and catalog files](requirements-and-deployment-planning-guidelines-for-device-guard.md#reviewing-your-applications-application-signing-and-catalog-files) in "Requirements and deployment planning guidelines for Windows Defender Device Guard." 
 
 ## Create catalog files
 
@@ -28,9 +29,9 @@ To create a catalog file, you use a tool called **Package Inspector**. You must 
 
 1.  Be sure that a code integrity policy is currently deployed in audit mode on the computer on which you will run Package Inspector.
 
-    Package Inspector does not always detect installation files that have been removed from the computer during the installation process. To ensure that these binaries are also trusted, deploy a code integrity policy in audit mode. You can use the code integrity policy that you created and audited in [Create a code integrity policy from a golden computer](deploy-code-integrity-policies-steps.md#create-a-code-integrity-policy-from-a-golden-computer) and [Audit code integrity policies](deploy-code-integrity-policies-steps.md#audit-code-integrity-policies).
+    Package Inspector does not always detect installation files that have been removed from the computer during the installation process. To ensure that these binaries are also trusted, deploy a code integrity policy in audit mode. You can use the code integrity policy that you created and audited in [Create a code integrity policy from a reference computer](deploy-code-integrity-policies-steps.md#create-a-code-integrity-policy-from-a-reference-computer) and [Audit code integrity policies](deploy-code-integrity-policies-steps.md#audit-code-integrity-policies).
 
-    > **Note**&nbsp;&nbsp;This process should **not** be performed on a system with an enforced Device Guard policy, only with a policy in audit mode. If a policy is currently being enforced, you will not be able to install and run the application.
+    > **Note**&nbsp;&nbsp;This process should **not** be performed on a system with an enforced Windows Defender Device Guard policy, only with a policy in audit mode. If a policy is currently being enforced, you will not be able to install and run the application.
 
 2.  Start Package Inspector, and then start scanning a local drive, for example, drive C:
 
@@ -77,6 +78,25 @@ To trust this catalog file within a code integrity policy, the catalog must firs
 For information about signing catalog files by using a certificate and SignTool.exe, a free tool available in the Windows SDK, see the next section, [Catalog signing with SignTool.exe](#catalog-signing-with-signtoolexe).
 
 For information about adding the signing certificate to a code integrity policy, see [Add a catalog signing certificate to a code integrity policy](#add-a-catalog-signing-certificate-to-a-code-integrity-policy).
+
+### Resolving package failures
+
+Packages can fail for the following reasons:
+
+- Package is too large for default USN Journal or Event Log sizes
+    - To diagnose whether USN journal size is the issue, after running through Package Inspector, click Start > install app > PackageInspector stop
+        - Get the value of the reg key at HKEY\_CURRENT\_USER/PackageInspectorRegistryKey/c: (this was the most recent USN when you ran PackageInspector start)
+        - `fsutil usn readjournal C: startusn=RegKeyValue > inspectedusn.txt`
+        - ReadJournal command should throw an error if the older USNs don’t exist anymore due to overflow
+    - For USN Journal, log size can be expanded using: `fsutil usn createjournal` command with a new size and alloc delta. `Fsutil usn queryjournal` will give the current size and allocation delta, so using a multiple of that may help
+    - To diagnose whether Eventlog size is the issue, look at the Microsoft/Windows/CodeIntegrity/Operational log under Applications and Services logs in Event Viewer and ensure that there are entries present from when you began Package Inspector (You can use write time as a justification; if you started the install 2 hours ago and there are only entries from 30 minutes prior, the log is definitely too small)
+    - To increase Eventlog size, in Event Viewer you can right click the operational log, click properties, and then set new values (some multiple of what it was previously)
+- Package files that change hash each time the package is installed
+    - Package Inspector is completely incompatible if files in the package (temporary or otherwise) change hash each time the package is installed. You can diagnose this by looking at the hash field in the 3077 block events when the package is failing in enforcement.  If each time you attempt to run the package you get a new block event with a different hash, the package will not work with Package Inspector
+- Files with an invalid signature blob or otherwise “unhashable” files
+    - This issue arises when a file that has been signed is modified post signing in a way that invalidates the PE header and renders the file unable to be hashed by the Authenticode Spec.
+    - Device Guard uses Authenticode Hashes to validate files when they are running. If the file is unhashable via the authenticode SIP, there is no way to identify the file to allow it, regardless of if you attempt to add the file to the policy directly, or re-sign the file with a Package Inspector catalog (the signature is invalidated due to file being edited, file can’t be allowed by hash due to authenticode hashing algorithm rejecting it)
+    - Recent versions of InstallShield packages that use custom actions can hit this. If the DLL input to the custom action was signed before being put through InstallShield, InstallShield adds tracking markers to the file (editing it post signature) which leaves the file in this “unhashable” state and renders the file unable to be allowed by Device Guard (regardless of if you try to allow directly by policy or resign with Package Inspector)
 
 ## Catalog signing with SignTool.exe
 
@@ -150,7 +170,7 @@ To simplify the management of catalog files, you can use Group Policy preference
 
 2.  Create a new GPO: right-click an OU, for example, the **DG Enabled PCs OU**, and then click **Create a GPO in this domain, and Link it here**, as shown in Figure 2.
 
-    > **Note**&nbsp;&nbsp;You can use any OU name. Also, security group filtering is an option when you consider different ways of combining code integrity policies (or keeping them separate), as discussed in [Planning and getting started on the Device Guard deployment process](planning-and-getting-started-on-the-device-guard-deployment-process.md).
+    > **Note**&nbsp;&nbsp;You can use any OU name. Also, security group filtering is an option when you consider different ways of combining code integrity policies (or keeping them separate), as discussed in [Planning and getting started on the Windows Defender Device Guard deployment process](planning-and-getting-started-on-the-device-guard-deployment-process.md).
 
    ![Group Policy Management, create a GPO](images/dg-fig13-createnewgpo.png)
 
@@ -318,9 +338,9 @@ At the time of the next software inventory cycle, when the targeted clients rece
 
 ## Related topics
 
-- [Introduction to Device Guard: virtualization-based security and code integrity policies](introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies.md)
+- [Introduction to Windows Defender Device Guard: virtualization-based security and code integrity policies](introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies.md)
 
-- [Planning and getting started on the Device Guard deployment process](planning-and-getting-started-on-the-device-guard-deployment-process.md)
+- [Planning and getting started on the Windows Defender Device Guard deployment process](planning-and-getting-started-on-the-device-guard-deployment-process.md)
 
-- [Deploy Device Guard: deploy code integrity policies](deploy-device-guard-deploy-code-integrity-policies.md)
+- [Deploy Windows Defender Device Guard: deploy code integrity policies](deploy-device-guard-deploy-code-integrity-policies.md)
 

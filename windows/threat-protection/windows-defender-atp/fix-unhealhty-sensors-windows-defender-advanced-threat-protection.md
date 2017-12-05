@@ -1,14 +1,16 @@
 ---
 title: Fix unhealthy sensors in Windows Defender ATP
 description: Fix machine sensors that are reporting as misconfigured or inactive so that the service receives data from the machine.
-keywords: misconfigured, inactive, fix sensor, sensor health,  no sensor data, sensor data, impaired communication, communication
+keywords: misconfigured, inactive, fix sensor, sensor health,  no sensor data, sensor data, impaired communications, communication
 search.product: eADQiWindows 10XVcnh
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
+ms.author: macapara
 author: mjcaparas
-localizationpriority: high
+ms.localizationpriority: high
+ms.date: 10/17/2017
 ---
 
 # Fix unhealthy sensors in Windows Defender ATP
@@ -20,6 +22,10 @@ localizationpriority: high
 - Windows 10 Pro
 - Windows 10 Pro Education
 - Windows Defender Advanced Threat Protection (Windows Defender ATP)
+
+
+
+>Want to experience Windows Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-fixsensor-abovefoldlink)
 
 Machines that are categorized as misconfigured or inactive can be flagged due to varying causes. This section provides some explanations as to what might have caused a machine to be categorized as inactive or misconfigured.
 
@@ -40,13 +46,13 @@ Do you expect a machine to be in ‘Active’ status? [Open a support ticket tic
 
 ## Misconfigured machines
 Misconfigured machines can further be classified to:
-  - Impaired communication
+  - Impaired communications
   - No sensor data
 
-### Impaired communication
+### Impaired communications
 This status indicates that there's limited communication between the machine and the service.
 
-The following suggested actions can help fix issues related to a misconfigured machine with impaired communication:
+The following suggested actions can help fix issues related to a misconfigured machine with impaired communications:
 
 - [Ensure the endpoint has Internet connection](troubleshoot-onboarding-windows-defender-advanced-threat-protection.md#ensure-the-endpoint-has-an-internet-connection)</br>
   The Window Defender ATP sensor requires Microsoft Windows HTTP (WinHTTP) to report sensor data and communicate with the Windows Defender ATP service.
@@ -69,8 +75,8 @@ Follow theses actions to correct known issues related to a misconfigured machine
 - [Ensure the telemetry and diagnostics service is enabled](troubleshoot-onboarding-windows-defender-advanced-threat-protection.md#ensure-the-telemetry-and-diagnostics-service-is-enabled)</br>
 If the endpoints aren't reporting correctly, you might need to check that the Windows 10 telemetry and diagnostics service is set to automatically start and is running on the endpoint.
 
-- [Ensure that Windows Defender is not disabled by policy](troubleshoot-onboarding-windows-defender-advanced-threat-protection.md#ensure-that-windows-defender-is-not-disabled-by-a-policy)</br>
-If your endpoints are running a third-party antimalware client, the Windows Defender ATP agent needs the Windows Defender Early Launch Antimalware (ELAM) driver to be enabled.
+- [Ensure that Windows Defender Antivirus is not disabled by policy](troubleshoot-onboarding-windows-defender-advanced-threat-protection.md#ensure-that-windows-defender-antivirus-is-not-disabled-by-a-policy)</br>
+If your endpoints are running a third-party antimalware client, the Windows Defender ATP agent needs the Windows Defender Antivirus Early Launch Antimalware (ELAM) driver to be enabled.
 
 If you took corrective actions and the machine status is still misconfigured, [open a support ticket](http://go.microsoft.com/fwlink/?LinkID=761093&clcid=0x409).
 

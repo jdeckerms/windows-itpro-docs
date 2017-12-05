@@ -8,8 +8,10 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: security
-localizationpriority: medium
+ms.localizationpriority: medium
 author: iaanw
+ms.author: iawilt
+ms.date: 08/25/2017
 ---
 
 
@@ -32,7 +34,7 @@ author: iaanw
 - Windows Defender Security Center app
 
 
-Block at First Sight is a feature of Windows Defender Antivirus cloud-delivered protection that provides a way to detect and block new malware within seconds. 
+Block at first sight is a feature of Windows Defender Antivirus cloud-delivered protection that provides a way to detect and block new malware within seconds. 
 
 It is enabled by default when certain pre-requisite settings are also enabled. In most cases, these pre-requisite settings are also enabled by default, so the feature is running without any intervention. You can use group policy settings to confirm the feature is enabled.
 
@@ -41,14 +43,18 @@ You can also [specify how long the file should be prevented from running](config
 > [!IMPORTANT]
 > There is no specific individual setting in System Center Configuration Manager to enable or disable Block at First Sight. It is enabled by default when the pre-requisite settings are configured correctly. You must use Group Policy settings to enable or disable the feature.
 
+
+>[!TIP]
+>You can also visit the Windows Defender Testground website at [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) to confirm the features are working and see how they work.
+
+
 ## How it works
 
-When a Windows Defender Antivirus client encounters a suspicious but undetected file, it queries our cloud protection backend. The cloud backend will apply heuristics, machine learning, and automated analysis of the file to determine the files as malicious or clean. The following video describes how this feature works.
+When a Windows Defender Antivirus client encounters a suspicious but undetected file, it queries our cloud protection backend. The cloud backend will apply heuristics, machine learning, and automated analysis of the file to determine the files as malicious or clean. 
 
-The Block at first sight feature only uses the cloud protection backend for executable files that are downloaded from the Internet, or originating from the Internet zone. A hash value of the EXE file is checked via the cloud backend to determine if this is a previously undetected file.
+The Block at First Sight feature only uses the cloud protection backend for executable files that are downloaded from the Internet, or originating from the Internet zone. A hash value of the .exe file is checked via the cloud backend to determine if this is a previously undetected file.
 
-<iframe 
-src="https://videoplayercdn.osi.office.net/embed/c2f20f59-ca56-4a7b-ba23-44c60bc62c59" width="768" height="432" allowFullScreen="true" frameBorder="0" scrolling="no"></iframe> 
+ 
 
 If the cloud backend is unable to make a determination, the file will be locked by Windows Defender AV while a copy is uploaded to the cloud. The cloud will perform additional analysis to reach a determination before it allows the file to run or blocks it in all future encounters, depending on whether the file is determined to be malicious or safe. 
 

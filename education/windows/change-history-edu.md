@@ -8,12 +8,50 @@ ms.sitesec: library
 ms.pagetype: edu
 author: CelesteDG
 ms.author: celested
-ms.date: 06/19/2017
+ms.date: 08/01/2017
 ---
 
 # Change history for Windows 10 for Education
 
 This topic lists new and updated topics in the [Windows 10 for Education](index.md) documentation.
+
+## November 2017
+
+| New or changed topic | Description |
+| --- | ---- |
+| [Test Windows 10 S on existing Windows 10 education devices](test-windows10s-for-edu.md) | Updated the the list of device manufacturers. |
+| [Set up Take a Test on multiple PCs](take-a-test-multiple-pcs.md) | Updated instances of the parameter enablePrint, or enablePrinting, to requirePrinting. |
+| [Set up Take a Test on a single PC](take-a-test-single-pc.md) | Updated instances of the parameter enablePrint, or enablePrinting, to requirePrinting. |
+| [Take a Test app technical reference](take-a-test-app-technical.md) | Added a note that the Alt+F4 key combination for enabling students to exit the test is disabled in Windows 10, version 1703 (Creators Update) and later. Also added additional info about the Ctrl+Alt+Del key combination. |
+
+## RELEASE: Windows 10, version 1709 (Fall Creators Update)
+
+| New or changed topic | Description |
+| --- | ---- |
+| [Reset devices with Windows Automatic Redeployment](windows-automatic-redeployment.md) | New. Learn how you can use this new feature to quickly reset student PCs from the lock screen and apply original settings and management enrollment (Azure Active Directory and device management) so the devices are ready to use and returned to a fully configured or known IT-approved state. |
+| [Test Windows 10 S on existing Windows 10 education devices](test-windows10s-for-edu.md) | Updated the *Go back to your previous edition of Windows 10* section with new information on how to work around cases where Win32 apps are blocked after switching from Windows 10 S back to your previous Windows edition. |
+| [Take a Test app technical reference](take-a-test-app-technical.md) | Updated. Starting with Windows 10, version 1709 (Fall Creators Update), assessments can now run in permissive mode. This mode enables students who need access to other apps, like accessibility tools, to use the apps. |
+
+## September 2017
+
+| New or changed topic | Description |
+| --- | ---- |
+| [Use the Set up School PCs app ](use-set-up-school-pcs-app.md) | Updated the prerequisites to provide more clarification. |
+
+## August 2017
+
+| New or changed topic | Description |
+| --- | ---- |
+| [Test Windows 10 S on existing Windows 10 education devices](test-windows10s-for-edu.md) | New. Find out how you can test Windows 10 S on a variety of Windows 10 devices (except Windows 10 Home) in your school and share your feedback with us. |
+| [Use the Set up School PCs app ](use-set-up-school-pcs-app.md) | Updated the instructions to reflect the new or updated functionality in the latest version of the app. |
+
+## July 2017
+
+| New or changed topic | Description |
+| --- | ---- |
+| [Get Minecraft: Education Edition with Windows 10 device promotion](get-minecraft-for-education.md)  | New information about redeeming Minecraft: Education Edition licenses with qualifying purchases of Windows 10 devices.  |
+| [Use the Set up School PCs app ](use-set-up-school-pcs-app.md) | Added the how-to video, which shows how to use the app to create a provisioning package that you can use to set up school PCs. |
+| [Take a Test app technical reference](take-a-test-app-technical.md) | Added a Group Policy section to inform you of any policies that affect the Take a Test app or functionality within the app. |
 
 ## June 2017
 
@@ -53,13 +91,13 @@ This topic lists new and updated topics in the [Windows 10 for Education](index.
 
 | New or changed topic | Description |
 | --- | --- |
-| [Upgrade Windows 10 Pro to Pro Education from Windows Store for Business] | New. Learn how to opt-in to a free upgrade to Windows 10 Pro Education. As of May 2017, this topic has been replaced with [Switch to Windows 10 Pro Education from Windows 10 Pro or Windows 10 S](switch-to-pro-education.md). |
+| [Upgrade Windows 10 Pro to Pro Education from Microsoft Store for Business] | New. Learn how to opt-in to a free upgrade to Windows 10 Pro Education. As of May 2017, this topic has been replaced with [Switch to Windows 10 Pro Education from Windows 10 Pro or Windows 10 S](switch-to-pro-education.md). |
 
 ## November 2016
 
 | New or changed topic | Description|
 | --- | --- |
-| [Working with Windows Store for Business – education scenarios](education-scenarios-store-for-business.md)  | New. Learn about education scenarios for Windows Store for Business.  |
+| [Working with Microsoft Store for Business – education scenarios](education-scenarios-store-for-business.md)  | New. Learn about education scenarios for Microsoft Store for Business.  |
 | [For teachers - get Minecraft: Education Edition](teacher-get-minecraft.md)  | Updates. Subscription support for Minecraft: Education Edition.  |
 | [For IT administrators - get Minecraft: Education Edition](school-get-minecraft.md)  | Updates. Subscription support for Minecraft: Education Edition.  |
 

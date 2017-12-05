@@ -5,7 +5,8 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: eross-msft
-localizationpriority: high
+ms.localizationpriority: high
+ms.author: lizross
 ---
 
 # Set up and test Cortana with Office 365 in your organization

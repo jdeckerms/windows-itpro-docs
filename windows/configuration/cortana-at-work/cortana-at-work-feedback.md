@@ -5,7 +5,8 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: eross-msft
-localizationpriority: high
+ms.localizationpriority: high
+ms.author: lizross
 ---
 
 # Send feedback about Cortana at work back to Microsoft

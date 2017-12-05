@@ -5,7 +5,7 @@ ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-localizationpriority: high
+ms.localizationpriority: high
 author: justinha
 ---
 
@@ -205,11 +205,11 @@ With Protected Processes, Windows 10 prevents untrusted processes from interacti
 
 ### Universal Windows apps protections
 
-When users download Universal Windows apps from the Windows Store, it’s unlikely that they will encounter malware because all apps go through a careful screening process before being made available in the store. Apps that organizations build and distribute through sideloading processes will need to be reviewed internally to ensure that they meet organizational security requirements.
+When users download Universal Windows apps from the Microsoft Store, it’s unlikely that they will encounter malware because all apps go through a careful screening process before being made available in the store. Apps that organizations build and distribute through sideloading processes will need to be reviewed internally to ensure that they meet organizational security requirements.
 
 Regardless of how users acquire Universal Windows apps, they can use them with increased confidence. Universal Windows apps run in an AppContainer sandbox with limited privileges and capabilities. For example, Universal Windows apps have no system-level access, have tightly controlled interactions with other apps, and have no access to data unless the user explicitly grants the application permission.
 
-In addition, all Universal Windows apps follow the security principle of least privilege. Apps receive only the minimum privileges they need to perform their legitimate tasks, so even if an attacker exploits an app, the damage the exploit can do is severely limited and should be contained within the sandbox. The Windows Store displays the exact capabilities the app requires (for example, access to the camera), along with the app’s age rating and publisher.
+In addition, all Universal Windows apps follow the security principle of least privilege. Apps receive only the minimum privileges they need to perform their legitimate tasks, so even if an attacker exploits an app, the damage the exploit can do is severely limited and should be contained within the sandbox. The Microsoft Store displays the exact capabilities the app requires (for example, access to the camera), along with the app’s age rating and publisher.
 
 ### Windows heap protections
 
@@ -431,7 +431,7 @@ Examples:
     Set-ProcessMitigation -Name notepad.exe -Enable SEHOP -Disable MandatoryASLR,DEPATL
     ```
 
--   **Convert Attack Surface Reduction (ASR) settings to a Code Integrity policy file**: If the input file contains any settings for EMET’s Attack Surface Reduction (ASR) mitigation, the converter will also create a Code Integrity policy file. In this case, you can complete the merging, auditing, and deployment process for the Code Integrity policy, as described in [Deploy Device Guard: deploy code integrity policies](/windows/device-security/device-guard/deploy-device-guard-deploy-code-integrity-policies). This will enable protections on Windows 10 equivalent to EMET’s ASR protections.
+-   **Convert Attack surface reduction (ASR) settings to a Code Integrity policy file**: If the input file contains any settings for EMET’s Attack surface reduction (ASR) mitigation, the converter will also create a Code Integrity policy file. In this case, you can complete the merging, auditing, and deployment process for the Code Integrity policy, as described in [Deploy Device Guard: deploy code integrity policies](/windows/device-security/device-guard/deploy-device-guard-deploy-code-integrity-policies). This will enable protections on Windows 10 equivalent to EMET’s ASR protections.
 
 -   **Convert Certificate Trust settings to enterprise certificate pinning rules**: If you have an EMET “Certificate Trust” XML file (pinning rules file), you can also use ConvertTo-ProcessMitigationPolicy to convert the pinning rules file into an enterprise certificate pinning rules file. Then you can finish enabling that file as described in [Enterprise Certificate Pinning](/windows/access-protection/enterprise-certificate-pinning). For example:
 

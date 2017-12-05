@@ -7,7 +7,8 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jdeckerms
-localizationpriority: high
+ms.localizationpriority: high
+ms.date: 11/28/2017
 ---
 
 # Changes to Group Policy settings for Windows 10 Start
@@ -55,7 +56,7 @@ These policy settings are available in **Administrative Templates\\Start Menu an
 </tr>
 <tr class="even">
 <td align="left">Prevent users from customizing their Start Screen</td>
-<td align="left"><p>Use this policy in conjunction with [CopyProfile](https://go.microsoft.com/fwlink/p/?LinkId=623229) or other methods for configuring the layout of Start to prevent users from changing it</p></td>
+<td align="left"><p>Use this policy in conjunction with a [customized Start layout](windows-10-start-layout-options-and-policies.md) to prevent users from changing it</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Prevent users from uninstalling applications from Start</td>
@@ -92,10 +93,6 @@ These policy settings are available in **Administrative Templates\\Start Menu an
 <tr class="odd">
 <td align="left">Start Layout</td>
 <td align="left"><p>This applies a specific Start layout, and it also prevents users from changing the layout. This policy can be configured in <strong>User Configuration</strong> or <strong>Computer Configuration</strong>.</p>
-<div class="alert">
-<strong>Note</strong>  
-<p>Start Layout policy setting applies only to Windows 10 Enterprise and Windows 10 Education.</p>
-</div>
 <div>
  
 </div></td>

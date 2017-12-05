@@ -8,8 +8,10 @@ ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: security
-localizationpriority: medium
+ms.localizationpriority: medium
 author: iaanw
+ms.author: iawilt
+ms.date: 08/25/2017
 ---
 
 # Configure and validate network connections for Windows Defender Antivirus
@@ -29,6 +31,12 @@ To ensure Windows Defender Antivirus cloud-delivered protection works properly, 
 This topic lists the connections that must be allowed, such as by using firewall rules, and provides instructions for validating your connection. This will help ensure you receive the best protection from our cloud-delivered protection services.
 
 See the Enterprise Mobility and Security blog post [Important changes to Microsoft Active Protection Services endpoint](https://blogs.technet.microsoft.com/enterprisemobility/2016/05/31/important-changes-to-microsoft-active-protection-service-maps-endpoint/) for some details about network connectivity.
+
+>[!TIP]
+>You can also visit the Windows Defender Testground website at [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) to confirm the following features are working:
+>- Cloud-delivered protection
+>- Fast learning (including Black at first sight)
+>- Potentially unwanted application blocking
 
 ## Allow connections to the Windows Defender Antivirus cloud
 
@@ -145,7 +153,7 @@ After whitelisting the URLs listed above, you can test if you are connected to t
 Use the following argument with the Windows Defender AV command line utility (*mpcmdrun.exe*) to verify that your network can communicate with the Windows Defender AV cloud:
 
 ```DOS
-MpCmdRun - ValidateMapsConnection 
+MpCmdRun -ValidateMapsConnection 
 ```
 > [!NOTE]
 > You need to open an administrator-level version of the command prompt. Right-click the item in the Start menu, click **Run as administrator** and click **Yes** at the permissions prompt. This command will only work on Windows 10, version 1703.
