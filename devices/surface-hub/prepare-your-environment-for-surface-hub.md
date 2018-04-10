@@ -72,6 +72,7 @@ After you've created your device account, to verify that it's setup correctly, r
 
  
 
+
 ## Prepare for first-run program 
 There are a few more item to consider before you start the [first-run program](first-run-program-surface-hub.md).  
 
